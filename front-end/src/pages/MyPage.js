@@ -12,6 +12,7 @@ const MyPage = () => {
       
       <h2>{ nickname }</h2>
       <Link to="/update" className={ styles.updateBtn }>회원 정보 수정</Link>
+      <Link to="/singingAI" className= { styles.singingAI }>AI가 불러주는 노래 들으러 가기</Link>
     </div>
   );
 };

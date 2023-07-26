@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import Header from "../components/commonUse/Header"
 
-const SearchResult = () =>{
+const AISearchResult = () =>{
     const location = useLocation()
     const data = location.state.data
     return(
@@ -15,4 +15,4 @@ const SearchResult = () =>{
       </>
   )
 }
-export default SearchResult
+export default AISearchResult
