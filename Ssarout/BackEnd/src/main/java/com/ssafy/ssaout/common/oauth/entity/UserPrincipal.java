@@ -1,6 +1,6 @@
 package com.ssafy.ssaout.common.oauth.entity;
 
-import com.ssafy.ssaout.common.api.entity.user.User;
+import com.ssafy.ssaout.user.domain.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

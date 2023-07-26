@@ -1,6 +1,6 @@
-package com.ssafy.ssaout.common.api.repository.user;
+package com.ssafy.ssaout.user.repository;
 
-import com.ssafy.ssaout.common.api.entity.user.UserRefreshToken;
+import com.ssafy.ssaout.user.domain.entity.UserRefreshToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

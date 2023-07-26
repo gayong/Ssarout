@@ -1,7 +1,7 @@
-package com.ssafy.ssaout.common.api.service;
+package com.ssafy.ssaout.user.service;
 
-import com.ssafy.ssaout.common.api.entity.user.User;
-import com.ssafy.ssaout.common.api.repository.user.UserRepository;
+import com.ssafy.ssaout.user.domain.entity.User;
+import com.ssafy.ssaout.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

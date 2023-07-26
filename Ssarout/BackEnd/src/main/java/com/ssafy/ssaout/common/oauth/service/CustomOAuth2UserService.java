@@ -1,7 +1,7 @@
 package com.ssafy.ssaout.common.oauth.service;
 
-import com.ssafy.ssaout.common.api.entity.user.User;
-import com.ssafy.ssaout.common.api.repository.user.UserRepository;
+import com.ssafy.ssaout.user.domain.entity.User;
+import com.ssafy.ssaout.user.repository.UserRepository;
 import com.ssafy.ssaout.common.oauth.entity.ProviderType;
 import com.ssafy.ssaout.common.oauth.entity.RoleType;
 import com.ssafy.ssaout.common.oauth.entity.UserPrincipal;

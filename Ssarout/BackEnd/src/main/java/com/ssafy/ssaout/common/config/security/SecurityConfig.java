@@ -1,6 +1,6 @@
 package com.ssafy.ssaout.common.config.security;
 
-import com.ssafy.ssaout.common.api.repository.user.UserRefreshTokenRepository;
+import com.ssafy.ssaout.user.repository.UserRefreshTokenRepository;
 import com.ssafy.ssaout.common.config.properties.AppProperties;
 import com.ssafy.ssaout.common.config.properties.CorsProperties;
 import com.ssafy.ssaout.common.oauth.entity.RoleType;

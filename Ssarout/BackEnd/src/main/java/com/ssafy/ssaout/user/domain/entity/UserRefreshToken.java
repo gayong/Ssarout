@@ -1,4 +1,4 @@
-package com.ssafy.ssaout.common.api.entity.user;
+package com.ssafy.ssaout.user.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;

@@ -1,7 +1,7 @@
-package com.ssafy.ssaout.common.api.controller.user;
+package com.ssafy.ssaout.user.controller.user;
 
-import com.ssafy.ssaout.common.api.entity.user.User;
-import com.ssafy.ssaout.common.api.service.UserService;
+import com.ssafy.ssaout.user.domain.entity.User;
+import com.ssafy.ssaout.user.service.UserService;
 import com.ssafy.ssaout.common.response.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;

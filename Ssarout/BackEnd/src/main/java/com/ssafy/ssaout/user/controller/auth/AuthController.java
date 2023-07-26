@@ -1,7 +1,7 @@
-package com.ssafy.ssaout.common.api.controller.auth;
+package com.ssafy.ssaout.user.controller.auth;
 
-import com.ssafy.ssaout.common.api.entity.user.UserRefreshToken;
-import com.ssafy.ssaout.common.api.repository.user.UserRefreshTokenRepository;
+import com.ssafy.ssaout.user.domain.entity.UserRefreshToken;
+import com.ssafy.ssaout.user.repository.UserRefreshTokenRepository;
 import com.ssafy.ssaout.common.response.ApiResponse;
 import com.ssafy.ssaout.common.config.properties.AppProperties;
 import com.ssafy.ssaout.common.oauth.entity.RoleType;

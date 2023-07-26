@@ -1,4 +1,4 @@
-package com.ssafy.ssaout.common.api.entity.user;
+package com.ssafy.ssaout.user.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ssafy.ssaout.common.oauth.entity.ProviderType;
@@ -35,6 +35,10 @@ public class User {
     @NotNull
     @Size(max = 100)
     private String username;
+
+    @Column(name = "NICKNAME")
+    @Size(max = 100)
+    private String nickname;
 
     /**
      * 사용자 정의 로그인 용, 소셜 로그인시 필요 없음
