@@ -1,8 +1,8 @@
 package com.ssafy.ssaout;
 
 
-import com.ssafy.ssaout.config.properties.AppProperties;
-import com.ssafy.ssaout.config.properties.CorsProperties;
+import com.ssafy.ssaout.common.config.properties.AppProperties;
+import com.ssafy.ssaout.common.config.properties.CorsProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
