@@ -31,6 +31,8 @@ spring:
         order_inserts: true
         order_updates: true
         format_sql: true
+  profiles:
+    include: oauth
 
 # cors 설정
 cors:
@@ -51,3 +53,4 @@ app:
   oauth2:
     authorizedRedirectUris:
       - http://localhost:3000/oauth/redirect
+

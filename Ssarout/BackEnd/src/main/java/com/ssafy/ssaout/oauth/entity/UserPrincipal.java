@@ -21,9 +21,9 @@ import java.util.Map;
 @Setter
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class UserPrincipal implements OAuth2User, UserDetails, OidcUser {
+public class UserPrincipal implements OAuth2User, OidcUser {
     private final String userId;
-    private final String password;
+   // private final String password;
     private final ProviderType providerType;
     private final RoleType roleType;
     private final Collection<GrantedAuthority> authorities;
@@ -45,31 +45,6 @@ public class UserPrincipal implements OAuth2User, UserDetails, OidcUser {
     }
 
     @Override
-    public String getUsername() {
-        return userId;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
-
-    @Override
     public Map<String, Object> getClaims() {
         return null;
     }
@@ -87,7 +62,7 @@ public class UserPrincipal implements OAuth2User, UserDetails, OidcUser {
     public static UserPrincipal create(User user) {
         return new UserPrincipal(
                 user.getUserId(),
-                user.getPassword(),
+               // user.getPassword(),
                 user.getProviderType(),
                 RoleType.USER,
                 Collections.singletonList(new SimpleGrantedAuthority(RoleType.USER.getCode()))

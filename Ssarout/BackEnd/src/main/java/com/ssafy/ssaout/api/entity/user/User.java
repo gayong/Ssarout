@@ -36,11 +36,14 @@ public class User {
     @Size(max = 100)
     private String username;
 
-    @JsonIgnore
-    @Column(name = "PASSWORD", length = 128)
-    @NotNull
-    @Size(max = 128)
-    private String password;
+    /**
+     * 사용자 정의 로그인 용, 소셜 로그인시 필요 없음
+     */
+//    @JsonIgnore
+//    @Column(name = "PASSWORD", length = 128)
+//    @NotNull
+//    @Size(max = 128)
+//    private String password;
 
     @Column(name = "EMAIL", length = 512, unique = true)
     @NotNull
@@ -88,7 +91,7 @@ public class User {
     ) {
         this.userId = userId;
         this.username = username;
-        this.password = "NO_PASS";
+        //this.password = "NO_PASS";
         this.email = email != null ? email : "NO_EMAIL";
         this.emailVerifiedYn = emailVerifiedYn;
         this.profileImageUrl = profileImageUrl != null ? profileImageUrl : "";
