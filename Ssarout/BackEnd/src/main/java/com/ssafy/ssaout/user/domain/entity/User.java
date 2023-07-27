@@ -104,4 +104,21 @@ public class User {
         this.createdAt = createdAt;
         this.modifiedAt = modifiedAt;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userSeq=" + userSeq +
+                ", userId='" + userId + '\'' +
+                ", username='" + username + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", email='" + email + '\'' +
+                ", emailVerifiedYn='" + emailVerifiedYn + '\'' +
+                ", profileImageUrl='" + profileImageUrl + '\'' +
+                ", providerType=" + providerType +
+                ", roleType=" + roleType +
+                ", createdAt=" + createdAt +
+                ", modifiedAt=" + modifiedAt +
+                '}';
+    }
 }
