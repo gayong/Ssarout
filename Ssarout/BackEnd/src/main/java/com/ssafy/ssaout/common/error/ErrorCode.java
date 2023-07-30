@@ -17,8 +17,9 @@ public enum ErrorCode {
     INVALID_ACCESS_TOKEN(500, "Invalid access token."),
     NOT_EXPIRED_TOKEN_YET(500, "Not expired token yet."),
     OAUTH_PROVIDER_MISMATCH(500, "기존에 가입된 SNS 계정이 있습니다. 해당 계정을 이용해주세요."),
-    FAIL_TOKEN_GENERATION(500, "Failed to generate Token.");
+    FAIL_TOKEN_GENERATION(500, "Failed to generate Token."),
 
+    SONG_NOT_FOUND(404, "해당 노래를 찾을 수 없습니다.");
 
     private int status;
     private String message;
