@@ -4,7 +4,7 @@ import com.ssafy.ssaout.user.repository.UserRefreshTokenRepository;
 import com.ssafy.ssaout.common.config.properties.AppProperties;
 import com.ssafy.ssaout.common.config.properties.CorsProperties;
 import com.ssafy.ssaout.common.oauth.entity.RoleType;
-import com.ssafy.ssaout.common.oauth.exception.RestAuthenticationEntryPoint;
+import com.ssafy.ssaout.common.error.exception.RestAuthenticationEntryPoint;
 import com.ssafy.ssaout.common.oauth.filter.TokenAuthenticationFilter;
 import com.ssafy.ssaout.common.oauth.handler.OAuth2AuthenticationFailureHandler;
 import com.ssafy.ssaout.common.oauth.handler.OAuth2AuthenticationSuccessHandler;
@@ -68,9 +68,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                     .authorizeRequests()
                     .requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
-                    .antMatchers("/api/**").hasAnyAuthority(RoleType.USER.getCode())
+                   // .antMatchers("/api/**").hasAnyAuthority(RoleType.USER.getCode())
                     .antMatchers("/api/**/admin/**").hasAnyAuthority(RoleType.ADMIN.getCode())
-                    .anyRequest().authenticated()
+                   // .anyRequest().authenticated()
                 .and()
                     .oauth2Login()
                     .authorizationEndpoint()
