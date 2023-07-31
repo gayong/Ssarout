@@ -35,15 +35,20 @@ public class Song {
 
     private Long view;
 
-    @Column(name = "VOICE_FILE", columnDefinition = "LONGBLOB")
+    @Column(name = "VOICE_FILE", columnDefinition = "BLOB")
     @Lob
     private String voiceFile;
+//    private byte[] voiceFile;
 
-    @Column(name = "MR_FILE", columnDefinition = "LONGBLOB")
+    @Column(name = "MR_FILE", columnDefinition = "BLOB")
+    @Lob
     private String mrFile;
+//    private byte[] mrFile;
 
-    @Column(name = "ALBUM_COVER_IMAGE", columnDefinition = "LONGBLOB")
+    @Column(name = "ALBUM_COVER_IMAGE", columnDefinition = "BLOB")
+    @Lob
     private String albumCoverImage;
+//    private byte[] albumCoverImage;
 
     @Column(name = "RUNNING_TIME")
     @NotNull
