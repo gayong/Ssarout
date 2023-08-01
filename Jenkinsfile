@@ -17,19 +17,17 @@ pipeline {
         stage('Build'){
             steps {
                 dir('/Ssarout/BackEnd') {
-                    sh "docker build --build-arg DEPENDENCY=build/dependency -t ssarout/backend ."
+                    sh "docker ps -f name=backend -q | xargs --no-run-if-empty docker container stop"
+                    sh "docker build -t backend ."
                 }
             }
         }
         stage('Deploy') {
             steps {
-                sh "docker ps -q --filter name=backend | grep -q . && docker stop backend && docker rm backend"
-                sh "docker run -d --name backend -p 8080:8080 "
-            }
-        }
-        stage('Finish') {
-            steps {
-                sh "docker images -qf dangling=true | xargs -I{} docker rmi {}"
+                dir('/Ssarout/BackEnd') {
+                    sh "docker run -it -d --rm -p 8080:8080 --name=backend backend -h bserver -e TZ=Asia/Seoul"
+                    sh "docker rmi -f $(docker images -f "dangling=true" -q) || true"
+                }
             }
         }
     }
