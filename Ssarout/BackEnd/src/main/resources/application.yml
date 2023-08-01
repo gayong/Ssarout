@@ -43,12 +43,12 @@ cors:
 
 # jwt secret key 설정
 jwt:
-  secret: ${JWT_SECRET}
+  secret: ${JWT_SECRET_KEY}
 
 # 토큰 관련 secret Key 및 RedirectUri 설정
 app:
   auth:
-    tokenSecret: ${TOKEN_SECRET}
+    tokenSecret: ${AUTHENTICATION_TOKEN_SECRET}
     tokenExpiry: 1800000
     refreshTokenExpiry: 604800000
   oauth2:
