@@ -6,7 +6,7 @@
   display: inline-block;
   justify-content: center;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .child {
   height: 0.16%;
@@ -183,4 +183,65 @@
   font-size: var(--font-size-mini);
   color: black;
   font-family: var(--font-line-seed-sans-kr);
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  /* flex-direction: column; */
+}
+
+.logoContainer {
+  flex: 1;
+  text-align: center;
+  align-self: center;
+  margin: auto;
+  margin-left: 25px;
+  /* margin-left: auto; */
+  /* display: inline-block; */
+  /* flex-grow: 1; */
+}
+
+.hamburgerContainer {
+  align-self: flex-end;
+}
+
+/* footer 하단 고정 */
+#wrapper {
+  min-height: calc(100vh - 71.52px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 23.52px;
+  margin: auto;
+  color: white;
+}
+
+.searchMent {
+  color: white;
+  font-size: 17px;
+  letter-spacing: -0.5px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  align-self: center;
+  align-items: center;
+}
+
+.footerMent {
+  font-size: 10px;
+  color: white;
+}
+
+.footerLine {
+  width: 90%;
+  opacity: 0.7;
 }
