@@ -1,17 +1,18 @@
 package com.ssafy.ssaout.song.repository;
 
 import com.ssafy.ssaout.song.domain.Song;
-import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
+
 
 public interface SongRepository extends JpaRepository<Song, Long> {
 
     @Modifying
-    @Query("select s from Song s where s.singer = :keyword or s.title = :keyword")
+    @Query("select s from Song s where s.singer like %:keyword% or s.title like %:keyword%")
     List<Song> findAllBySingerOrTitle(@Param("keyword") String keyword);
 
     @Modifying
