@@ -72,6 +72,7 @@ function App() {
         <Route exact path="/oauth/redirect" element={<Redirecion/>}/>
         <Route exact path="/intro" element={<ServiceIntro/>}/>
         <Route exact path="/nickNamePage" element={<NickNamePage />} />
+        <Route exact path="/history" element={<History />} />
 
       
         <Route 
