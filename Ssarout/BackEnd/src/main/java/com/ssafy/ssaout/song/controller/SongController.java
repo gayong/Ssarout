@@ -38,7 +38,7 @@ public class SongController {
         return ResponseEntity.ok(apiResponse);
     }
 
-    @GetMapping("/record")
+    @GetMapping("/info")
     public ResponseEntity<ApiResponse> getSongInfo(@RequestParam(value = "songId") Long songId) {
         Song song = songService.getSongById(songId);
 //        List<SongLine> songLineList = songLineService.getAllSongLineById(songId);
