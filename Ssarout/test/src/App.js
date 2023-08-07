@@ -1,11 +1,11 @@
-import { ScoreDrawer } from './ScoreDrawer';
-import ToneDetector from './ToneDetector';
-import ToneGenerator from './ToneGenerator';
-import { Note, parseScore } from './ScoreParser';
-import { Sharer } from './Sharer';
+import { ScoreDrawer } from "./ScoreDrawer";
+import ToneDetector from "./ToneDetector";
+import ToneGenerator from "./ToneGenerator";
+import { Note, parseScore } from "./ScoreParser";
+import { Sharer } from "./Sharer";
 
-import SongEditor from './SongEditor';
-import createElem from './DOMUtil';
+import SongEditor from "./SongEditor";
+import createElem from "./DOMUtil";
 
 const UPDATE_INTERVAL = 1000 / 60;
 
@@ -13,7 +13,7 @@ export class App {
   constructor(appContainer) {
     this.detector = null;
     this.drawer = null;
-    this.player = null;
+    // this.player = null;
     this.wrapper = null;
     this.lastTime = 0;
     this.elapsed = 0;
@@ -29,13 +29,15 @@ export class App {
     this.createElements();
     appContainer.appendChild(this.wrapper);
     requestAnimationFrame(this.loop);
+    this.score = [];
+    this.soundFile = null;
   }
 
   createElements() {
-    this.blind = createElem('div', { class: 'blind' }, 'Click to start app');
-    const wrapper = createElem('div', {});
+    this.blind = createElem("div", { class: "blind" }, "Click to start app");
+    const wrapper = createElem("div", {});
 
-    const canvasContainer = createElem('div', {});
+    const canvasContainer = createElem("div", {});
     const canvas = this.drawer.renderElement();
     canvasContainer.appendChild(canvas);
     this.drawer.start([]);
@@ -50,29 +52,36 @@ export class App {
   }
 
   bindEvents() {
-    this.sharer.on('song-select', this.songSelected.bind(this));
+    this.sharer.on("song-select", this.songSelected.bind(this));
 
-    this.songEditor.on('play', async () => {
+    this.songEditor.on("play", async () => {
+      console.log("play this : ", this);
       if (!this.inited) return;
+      this.detector.recording();
+      // setTimeout(() => {
       this.playSong(parseScore(this.songEditor.score));
+      // }, 9100);
     });
-    this.songEditor.on('stop', this.stopSong.bind(this));
-    this.songEditor.on('key-up', this.keyUp.bind(this));
-    this.songEditor.on('key-down', this.keyDown.bind(this));
-    this.songEditor.on('change', (prop, value) => {
+    this.songEditor.on("stop", this.stopSong.bind(this));
+    this.songEditor.on("stop", () => {
+      this.detector.recording();
+    });
+    this.songEditor.on("key-up", this.keyUp.bind(this));
+    this.songEditor.on("key-down", this.keyDown.bind(this));
+    this.songEditor.on("change", (prop, value) => {
       switch (prop) {
-        case 'melody':
+        case "melody":
           this.toggleSound(value);
           break;
-        case 'volume':
+        case "volume":
           this.setVolume(value);
           break;
       }
     });
 
-    this.blind.addEventListener('click', async () => {
+    this.blind.addEventListener("click", async () => {
       await this.init();
-      this.blind.style.display = 'none';
+      this.blind.style.display = "none";
     });
   }
 
@@ -84,9 +93,9 @@ export class App {
   async init() {
     this.audio = new (window.AudioContext || window.webkitAudioContext)();
     this.detector = new ToneDetector(this.audio);
-    this.player = new ToneGenerator(this.audio);
+    // this.player = new ToneGenerator(this.audio);
 
-    this.detector.on('note', this.onNote.bind(this));
+    this.detector.on("note", this.onNote.bind(this));
     await this.detector.init();
     this.inited = true;
     this.drawer.inited();
@@ -94,10 +103,14 @@ export class App {
 
   playSong(notes) {
     this.drawer.start(notes);
+    // console.log(notes);
   }
 
   // @autobind 데코레이터를 제거하고 바인딩된 메소드를 정의합니다.
   stopSong() {
+    // console.log(this);
+    this.score = this.drawer.scores();
+    this.drawer.stop();
     this.drawer.start([]);
   }
 
@@ -107,6 +120,32 @@ export class App {
   }
 
   loop(time) {
+    const test = this.drawer.getTest();
+
+    // 좀더 깔끔하게 처리 하기
+    if (test) {
+      console.log("성공적");
+      this.detector.recording();
+      this.drawer.setTest(false);
+      const mediaRecorder = this.detector.getMediaRecorder();
+      const audioArray = this.detector.getAudioArray();
+      mediaRecorder.onstop = async (event) => {
+        // 녹음이 종료되면, 배열에 담긴 오디오 데이터(Blob)들을 합친다: 코덱도 설정해준다.
+        const blob = new Blob(audioArray, { type: "audio/wav" });
+        audioArray.splice(0); // 기존 오디오 데이터들은 모두 비워 초기화한다.
+
+        // Blob 데이터에 접근할 수 있는 주소를 생성한다.
+        const blobURL = window.URL.createObjectURL(blob);
+        this.soundFile = new File([blobURL], "soundBlob.wav", {
+          lastModified: new Date().getTime(),
+          type: "audio",
+        });
+        console.log(blobURL);
+        console.log("soundaaaaa : ", this.soundFile);
+
+      };
+    }
+
     if (this.lastTime === 0) {
       this.lastTime = time;
     }
@@ -130,7 +169,7 @@ export class App {
     this.drawer.update(delta);
     if (this.playMusic) {
       const note = this.drawer.getCurrentNote();
-      this.player.playNote(note, this.key);
+      // this.player.playNote(note, this.key);
     }
   }
 
@@ -138,9 +177,9 @@ export class App {
     this.drawer.render();
   }
 
-  setVolume(v) {
-    this.player.setVolume(v);
-  }
+  // setVolume(v) {
+  //   this.player.setVolume(v);
+  // }
 
   toggleSound(force) {
     if (force === undefined) {
@@ -148,9 +187,9 @@ export class App {
     } else {
       this.playMusic = force;
     }
-    if (!this.playMusic) {
-      this.player.playTone(0);
-    }
+    // if (!this.playMusic) {
+    //   this.player.playTone(0);
+    // }
   }
 
   // @autobind 데코레이터를 제거하고 바인딩된 메소드를 정의합니다.

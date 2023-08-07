@@ -1,20 +1,16 @@
-
 const articles = [
-    {
-        title: '애국가',
-        singer: '',
-        author: 'nobody',
-        score: `t60 o3 l4
-d'동'g.'해'f+8'물'e'과' g'백'd'두'c-'산'd'이' g'마'a8'르'b8'고'b+.'닳'b8'도' a2'록'.r
->d.'하'c8'느'<b'님'a'이' g'보'f+8'우'e8d'하'c-'사' d'우'g'리'a8'나'a8'라'b'만' g2.'세'r
-f+.'무'g8a'궁'f+'화' b.'삼'>c8d'천'<b'리' a'화'g'려'f+'강'g a2.'산'r
->d.'대'c8'한'<b'사'a'람' g'대'f+8'한'e8d'으'c-'로' d'길'g'이'a8'보'a8'전'b'하'g2.'세'r`
-    },
-    {
-        title: '안녕(sample)',
-        singer: '박혜경',
-        author: 'nobody',
-        score: `t80 l8 o4
+  {
+    title: "애국가",
+    singer: "",
+    author: "nobody",
+    score: `t60 o3 l4
+d'동'g.'해'`,
+  },
+  {
+    title: "안녕(sample)",
+    singer: "박혜경",
+    author: "nobody",
+    score: `t80 l8 o4
 >c#'외'<e'로'e'운'e'날'e16'들'f#16'이'&f#16e.'여'
 d#'모'd#16'두'd#16'다'&d#16>c#'안'<b16'녕'&b4rb'내'
 >c#'머'<d16'리'd16'속'&d16 d.'에'd'눈'd16'물'e'들'd.'도'
@@ -25,13 +21,13 @@ b>c#16'타'<b16&'고'b>c#16'멀'<b16'리'&b16a16f#rf#'후'
 a4.>c'아'<b4.'가'a'굿'
 a2.'바이' f#16'오'a'오'a16'오'&
 a2. f#'영'a'원'
-a2.'히' f#16'워'a'오'a16'오'&a2.r4`
-    },
-    {
-        title: '응급실',
-        singer: 'Izi',
-        author: 'nobody',
-        score: `t72 o3 l8
+a2.'히' f#16'워'a'오'a16'오'&a2.r4`,
+  },
+  {
+    title: "응급실",
+    singer: "Izi",
+    author: "nobody",
+    score: `t72 o3 l8
 <b-'후'>
 g4'회'r4 b-'하'a-16'고'g16'있'&gf'어'&
 fd'요'&d4r4. <g'우'>
@@ -96,13 +92,13 @@ l8 c'나'<b16'를'>c16'버'&cd'리'f.'지'e-16e-4'마'
 <b-'그'a16'냥'b-16'날'&b-16>b-'안'a-16 a-'아'g16g16'줘'&g4
 r2 c'다'd16'시'e-16'사'&e-16f.'랑'
 g.'하'f16 f4'게' e-.'돌'd16 d4'아'
-f'와'e-&e-4`
-    },
-    {
-        title: '애인있어요(1절)',
-        singer: '이은미',
-        author: 'sample',
-        score: `t70 o4 l8
+f'와'e-&e-4`,
+  },
+  {
+    title: "애인있어요(1절)",
+    singer: "이은미",
+    author: "sample",
+    score: `t70 o4 l8
 r <b'아'b'직'b'도'>d4.'넌' d'혼'
 <g4.'잔'g16'거'b16'니'&b4r b'물'
 e4'어're16'오'a16'네'g4'요' d.'난'g16'그'
@@ -125,13 +121,13 @@ g.'담'a.'아'b'둘'b'거'a16a.'야' g16'가'a16'끔'&
 a16b.'씩'r l16b'차'b'오'>c8'르'c'는'd'눈'&d<b-'물'a8l8
 a16'만'g. g'알'a16'고'b16'있'&b16>e.'죠'&e4
 <r4e'그'f#16'사'g16'람'&g16g'그'f#16'대'&f#.e16'라'
-f#'는'g4.'걸'&g2`
-    },
-    {
-        title: '가시(1절)',
-        singer: '버즈',
-        author: 'sample',
-        score: `t72 l8 o3
+f#'는'g4.'걸'&g2`,
+  },
+  {
+    title: "가시(1절)",
+    singer: "버즈",
+    author: "sample",
+    score: `t72 l8 o3
 g#'너'b'없'b'는'g#16'지'>c#.'금'<b'도'&b.>d#16'눈'
 e.'부'd#16'신'c#'하'<g#16'늘'>c#16&'과'c#4r4
 <g#'눈'b'부'b'시'b16'게'>c#16'웃'&c#<b'는'g#'사'f#16'람'g#16'들'&g#2r2
@@ -157,13 +153,13 @@ g#4'시'&g#16f#16f#16'가'e16'되'f#4'어'<r4
 b.'제'b16'발'>e16'가'f#16'라'g#'고'&g#4r4
 <b#.'아'b#16'주'>e16'가'f#16'라'g#'고'&g#4rf#'애'
 f#'써'e16e16'도'&e d#16'나'e16'를'f#'괴'e'롭'd#'히'd#16'는'd#16'데'e2.r4
-`
-    },
-    {
-        title: '체념(1절)',
-        singer: '빅마마',
-        author: 'sample',
-        score: `t75 o4 l16
+`,
+  },
+  {
+    title: "체념(1절)",
+    singer: "빅마마",
+    author: "sample",
+    score: `t75 o4 l16
 e-8'행'
 d-4.'복'c8'했'c4'어' c8'너'd-'와'e-'의'
 e-4.'시'<b-8'간'b-4'들'r8 a-'아'b-'마'
@@ -195,14 +191,13 @@ d-8'만'c'하'<b-'는'&b-a-'거'b-b-'니'&b-4 r8 e-8'시'
 b-4&b->c8'다'c'면'&c<b-a-8 r8 a-'다'g'시'
 f8.'예'>c'전'&c<b-b-'으'e-'로'&e-4. b-'돌'>c'아'
 d-8'가'c'고'<b-'싶'&b-8a-'은'a-'마'&a-8f'음'g'뿐'&g8a-'이'a-'야'&
-a-2`
-
-    },
-    {
-        title: '천년의사랑',
-        singer: '박완규',
-        author: 'sample',
-        score: `t66 o3 l8
+a-2`,
+  },
+  {
+    title: "천년의사랑",
+    singer: "박완규",
+    author: "sample",
+    score: `t66 o3 l8
 >c4<ef&f4rf[이대로널]
 ebbe b>c16c16&c4[보낼수는없다고]
 <a4agfre[밤을세워간]
@@ -226,13 +221,13 @@ r8aab8ab&b4r8e8[힘이들었니천]
 >c4c8cc&c4r8d8[년이가도나]
 <b8a8g8f8 d8ee&e4[너를잊을수없어]
 l8 ffga>c4<b.a16[사랑했기때문 ]
-a1[에]`
-    },
-    {
-        title: '말리꽃',
-        singer: '이승철',
-        author: 'sample',
-        score: `t70 o3 l8
+a1[에]`,
+  },
+  {
+    title: "말리꽃",
+    singer: "이승철",
+    author: "sample",
+    score: `t70 o3 l8
 
 e[얼]
 >c4<b>c&c<bag[마나더견뎌야]
@@ -279,13 +274,13 @@ f#.b16&bf#16d16d4.d[져가려-해어]
 ee16d16c4 f#f#16e16&ef#[두운--세상속에]
 gab-16ag16g4.e[숨쉴날-들이이]
 >c4<bge4.a&[제잊혀지도]
-a4.g&g2[록]`
-    },
-    {
-        title: '귀로',
-        singer: '나얼',
-        author: 'sample',
-        score: `t54 l16 o3
+a4.g&g2[록]`,
+  },
+  {
+    title: "귀로",
+    singer: "나얼",
+    author: "sample",
+    score: `t54 l16 o3
 g.a32b-.g32b-.>e-32d8r8..<g[화려한불빛으로그]
 f#.g32a.f#32a.>e-32d4r8[뒷모습만보이며]
 <a.b-32>c.<b-32>c.e-32d.c32r8<b-.>c32[안녕이란말도없이사라]
@@ -309,13 +304,13 @@ a.b-16&b-a4r[지-]
 gab-b-ag16f#16[아무말도없이-]
 f#ga&ar..<a32[떠나간그]
 >a16.a32&agf#ra16f#32g32&[대가정말미워-]
-g16g16&g4[요] `
-    },
-    {
-        title: '낭만고양이',
-        singer: '체리필터',
-        author: 'sample',
-        score: `t180 o4 l8
+g16g16&g4[요] `,
+  },
+  {
+    title: "낭만고양이",
+    singer: "체리필터",
+    author: "sample",
+    score: `t180 o4 l8
 <f4>[내]
 c4.<b-&b-2>[두눈]
 cd4f&f<b-4b-[밤이면별이]
@@ -357,47 +352,100 @@ g4r4g4b-4[홀로]
 b-4r4g4b-4[깊고]
 >d4<b-b-&b->d4.[슬픈나의]
 c2.<b-b-&b-2[바다여]
-`
-    }
+`,
+  },
+  {
+    title: "흔들리는 꽃들",
+    singer: "장범준",
+    author: "sample",
+    score: `t100
+    <d16'흔'd16'들'd8'리'd8'는'd8'꽃'c8'들'c8'속'd16'에'd4'서'
+d16''r2''f8'네'f8'샴'g8'푸'g8'향'g8'이'g8'느'f8'껴'd8'진'e16'거'd4'야'
+d16''r2''d16'스'd16'쳐'e8'지'e8'나'e16'간'g8'건'f4'가'f16''r8''
+e8'뒤'd8'돌'e8'아'd8'보'c16'지'c16''<b4'만'
+r8''b16'그'b16'냥'r8''b16'사'b16'람'b8'들'g8'만'g8'보'b8'이'b8'는'>c16'거'c4'야'
+/*M 12 */  c16''r2.''d16'다'd16'와'd8'가'd8'는'd8'집'c8'근'c8'처'd16'에'd4.'서'd16''r2''
+f16'괜'f16'히'f8'핸'g8'드'g8'폰'g8'만'g8'만'f8'지'd8'는'e16'거'd4.'야'
+/*M 16 */  d16''r2''d16'한'd16'번'e8'연'e8'락'e16'해'g8'볼'f4'까'f16''r8''
+f8'용'f8'기'd8'내'f8'보'a16'지'a8'만'g8''.r8''
+g16'그'a16'냥'b8'내'b8'마'b8'음'g8'만'g8'아'b8'쉬'b8'운'>c16'거'c4'야'
+/*M 20 */  c16''r4''<f16'걷'f16'다'f16'가'g16'보'b8'면'
+/*M 21 */  >d4'항'd8'상'.c16'이'c8'렇'd8'게'c8'너'<b8''g8'를'g8''r8''
+>d16'바'd16'라'c8'만'd8'보'c8'던'<b8'너'g8'를'g8''r8''>d16'기'd16'다'd8'린'c8'다'<b8'고'
+>c8'말'<b8'할'>d4'까'.r8''
+<f16'지'f16'금'f16'집'g16'앞'b8'에'>d4'계'd8'속'.c16'이'c8''d8'렇'c8'게'<b8'너'g8'를'g8''r8''
+>d16'아'd16'쉬'c8'워'd8'하'c8'다'<b8'너'g8'를'g8''r8''>d16'연'd16'락'd8'했'c8'다'<b8'할'b2'까'r2.''
+d16'지'd16'나'd8'치'd8'는'd8'꽃'c8'들'c8'속'd16'에'd4'서'd16''r2''
+f8'네'f8'샴'g8'푸'g8'향'g8'만'g8'보'f8'이'd8'는'e16'거'd4'야'd16''r2''
+d16'스'd16'쳐'e8'지'e8'나'e16'간'g8'건'f4'가'f16''r8''
+f8'뒤'f8'돌'd8'아'f8'보'a16'지'a8'만'g8''r8''
+g16'그'a16'냥'b8'내'b8'마'b8'음'g8'만'g8'바'b8'빠'b8'진'>c16'거'c4'야'c16''r4''
+<f16'걷'f16'다'f16'가'g16'보'b8'면'>d4'항'd8'상'c16'이'c8'렇'd8'게'c8'너'<b8''g8'를'g8''
+r8''>d16'바'd16'라'c8'만'd8'보'c8'던'<b8'너'g8'를'g8''r8''>d16'기'd16'다'd8'린'c8'다'<b8'고'
+>c8'말'<b8'할'>d4'까'r8''
+<f16'지'f16'금'f16'집'g16'앞'b8'에'>d4'계'd8'속'c16'이'c8'렇'd8'게'c8'너'<b8''g8'를'g8''r8''
+>d16'아'd16'쉬'c8'워'd8'하'c8'다'<b8'너'g8'를'g8''r8''>d16'연'd16'락'd8'했'c8'다'<b8'할'b4'까'r8''
+a16'어'a16'떤'b8'계'>f8'절'f8'이'd8'너'c8''<b8'를'r8''>d16'우'd16'연'c8'히'd8'라'c8'도'
+<b8'너'g8''g8'를'r8''>e16'마'e16'주'e8'치'd8'게'<b16'할'>c16'까'c4''r8''
+c8'난'<a8'이'a8'대'>c8''c4'로'r8''
+d16'아'd16'쉬'c8'워'd8'하'c8'다'<b8'너'g8''g8'를'r8''>d16'바'd16'라'c8'만'd8'보'c8'던'<b8'너'
+g8''g8'를'r8''>e8'기'e8'다'd16'리'c16''c8'면'd8''e4'서'r8''
+e16'아'e16'무'e8'말'd8'못'<b16'하'>c16'고'c4''r8''e16'그'e16'리'e8'워'd16'만'<b16'할'b16'까'>c16''c2''r4''
+<f16'걷'f16'다'f16'가'g16'보'b8'면'
+>d4'항'd8'상'.c16'이'c8'렇'd8'게'c8'너'<b8''g8'를'g8''r8''
+>d16'바'd16'라'c8'만'd8'보'c8'던'<b8'너'g8'를'g8''r8''>d16'생'd16'각'd8'한'c8'다'<b8'고'
+>c8'말'<b8'할'>d4'까'.r8''
+<f16'지'f16'금'f16'집'g16'앞'b8'에'
+>c16'기'd16'다'd16'리'd8'고'.d16'때'd16'론'c16'지'd16'나'd16'치'd8'고'
+d16'다'd16'시'c16'기'd16'다'd16'리'd8'는'r16''d16'꽃'd16'이'g8'피'f8'는'd8'거'c16'리'c16'에'<b4''r8''
+>e16'보'e16'고'e8'파'e8'라'e8'이'e16'밤'e16'에'd4''<b48''
+b16'걷'b16'다'b16'가'>f16'보'f8'면'd4'항'd8'상'c16'이'c8'렇'd8'게'c8'너'<b8''g8'를'g8''r8''
+>d16'아'd16'쉬'c8'워'd8'하'c8'다'<b8'너'g8'를'g8''r8''>d16'기'd16'다'd8'린'c8'다'<b8'고'
+>c8'말'<b8'할'>d4'까'.r8''
+<f16'지'f16'금'f16'집'g16'앞'b8'에'>d4'계'd8'속'c16'이'c8'렇'd8'게'c8'너'<b8''g8'를'g8''r8''
+>d16'아'd16'쉬'c8'워'd8'하'c8'다'<b8'너'g8'를'g8''r8''>d16'연'd16'락'd8'했'c8'다'<b8'할'b2'까'`,
+  },
 ];
 
 class FileModel {
   constructor() {
-      this.list = articles;
+    this.list = articles;
   }
 
   getLatest() {
-      const result = this.list.slice(0, 20);
-      return result;
+    const result = this.list.slice(0, 20);
+    return result;
   }
 
   search(keyword) {
-      keyword = keyword.trim();
-      return this.list.filter(article => article.title.includes(keyword)).slice();
+    keyword = keyword.trim();
+    return this.list
+      .filter((article) => article.title.includes(keyword))
+      .slice();
   }
 
   save(article) {
-      if (article.idx) {
-          this.edit(article);
-      } else {
-          this.add(article);
-      }
+    if (article.idx) {
+      this.edit(article);
+    } else {
+      this.add(article);
+    }
   }
 
   add(article) {
-      article.idx = this.list.length;
-      this.list.push(article);
+    article.idx = this.list.length;
+    this.list.push(article);
   }
 
   edit(article) {
-      const item = this.list.find(i => i.idx === article.idx);
-      item.author = article.author;
-      item.score = article.score;
-      item.singer = article.singer;
-      item.title = article.title;
+    const item = this.list.find((i) => i.idx === article.idx);
+    item.author = article.author;
+    item.score = article.score;
+    item.singer = article.singer;
+    item.title = article.title;
   }
 }
 
 module.exports = {
-  FileModel
+  FileModel,
 };
