@@ -8,8 +8,12 @@ import com.ssafy.ssaout.common.error.exception.NotFoundException;
 import com.ssafy.ssaout.common.utils.AmazonS3Uploader;
 import com.ssafy.ssaout.result.domain.Result;
 import com.ssafy.ssaout.result.dto.request.ResultCreateRequestDto;
-import com.ssafy.ssaout.result.dto.response.ResultResponseDto;
-import com.ssafy.ssaout.result.dto.response.ResultsResponseDto;
+import com.ssafy.ssaout.result.dto.response.ResultDetailResponseDto;
+import com.ssafy.ssaout.result.dto.response.ResultHistoryResponseDto;
+import com.ssafy.ssaout.result.dto.response.ResultPerSongResponseDto;
+import com.ssafy.ssaout.result.dto.response.ResultsDetailResponseDto;
+import com.ssafy.ssaout.result.dto.response.ResultsHistoryResponseDto;
+import com.ssafy.ssaout.result.dto.response.ResultsPerSongResponseDto;
 import com.ssafy.ssaout.result.repository.ResultRepository;
 import com.ssafy.ssaout.song.domain.Song;
 import com.ssafy.ssaout.song.repository.SongRepository;
@@ -37,10 +41,12 @@ public class ResultService {
         MultipartFile multipartFile) {
         try {
             String recordFileUrl = amazonS3Uploader.upload(multipartFile);
+
             Song song = songRepository.findById(resultCreateRequestDto.getSongId())
                 .orElseThrow(() -> new NotFoundException(
                     ErrorCode.SONG_NOT_FOUND));
             User user = userRepository.findByUserId(userId);
+
             Result result = resultRepository.save(Result.builder().song(song).user(user).accuracy(
                 resultCreateRequestDto.getAccuracy()).recordFile(recordFileUrl).build());
         } catch (IOException e) {
@@ -48,11 +54,39 @@ public class ResultService {
         }
     }
 
-    public ResultsResponseDto getResults(String userId) {
+    public ResultsPerSongResponseDto getResultsPerSong(String userId) {
         User user = userRepository.findByUserId(userId);
-        List<ResultResponseDto> resultList = resultRepository.findAllByUser(user)
-            .stream().map(ResultResponseDto::new).collect(
-                Collectors.toList());
-        return new ResultsResponseDto(resultList, resultList.size());
+//        List<ResultPerSongResponseDto> resultList = resultRepository.findAllByUser(user)
+//            .stream().map(ResultPerSongResponseDto::new).collect(
+//                Collectors.toList());
+        List<ResultPerSongResponseDto> resultPerSongResponseDtoList = resultRepository.findResultByUserGroupBySong(
+            user);
+
+        return new ResultsPerSongResponseDto(resultPerSongResponseDtoList,
+            resultPerSongResponseDtoList.size());
+    }
+
+    public ResultsDetailResponseDto getResultsDetail(String userId, Long songId) {
+        User user = userRepository.findByUserId(userId);
+        Song song = songRepository.findById(songId).orElseThrow(() -> new NotFoundException(
+            ErrorCode.SONG_NOT_FOUND));
+
+        List<ResultDetailResponseDto> resultDetailResponseDtoList = resultRepository.findAllByUserAndSong(
+            user, song).stream().map(ResultDetailResponseDto::new).collect(
+            Collectors.toList());
+
+        return ResultsDetailResponseDto.builder().results(resultDetailResponseDtoList).resultCount(
+            resultDetailResponseDtoList.size()).build();
+    }
+
+    public ResultsHistoryResponseDto getResultsHistory(String userId) {
+        User user = userRepository.findByUserId(userId);
+
+        List<ResultHistoryResponseDto> resultHistoryResponseDtoList = resultRepository.findAllByUser(
+            user).stream().map(ResultHistoryResponseDto::new).collect(Collectors.toList());
+
+        return ResultsHistoryResponseDto.builder().results(resultHistoryResponseDtoList)
+            .resultCount(
+                resultHistoryResponseDtoList.size()).build();
     }
 }

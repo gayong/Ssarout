@@ -5,12 +5,12 @@ import java.util.List;
 import lombok.Getter;
 
 @Getter
-public class ResultsResponseDto {
+public class ResultsPerSongResponseDto {
 
-    private final List<ResultResponseDto> results;
+    private final List<ResultPerSongResponseDto> results;
     private final Integer resultCount;
 
-    public ResultsResponseDto(List<ResultResponseDto> results, Integer resultCount) {
+    public ResultsPerSongResponseDto(List<ResultPerSongResponseDto> results, Integer resultCount) {
         this.results = results;
         this.resultCount = resultCount;
     }
