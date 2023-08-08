@@ -40,6 +40,7 @@ class ToneDetector extends EventEmitter {
     this.audioArray = [];
     this.isRecording = false;
     this.sound = null;
+    this.Url = ""
   }
 
   async init() {
@@ -77,10 +78,10 @@ class ToneDetector extends EventEmitter {
           lastModified: new Date().getTime(),
           type: "audio",
         });
-        console.log(blobURL);
-        console.log("sound : ", this.sound);
+        // console.log(blobURL);
+        // console.log("sound : ", this.sound);
         // 여기에 로그인 중인지 아닌지 확인하는 조건문 필요
-
+        this.Url = blobURL
         try {
           //결과, 녹음파일 서버에 저장
           const formData = new FormData();
