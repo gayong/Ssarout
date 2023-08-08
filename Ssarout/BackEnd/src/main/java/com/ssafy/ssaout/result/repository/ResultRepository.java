@@ -24,4 +24,11 @@ public interface ResultRepository extends JpaRepository<Result, Long> {
     List<ResultPerSongResponseDto> findResultByUserGroupBySong(@Param("user") User user);
 
     List<Result> findAllByUserAndSong(User user, Song song);
+
+    @Query(
+        "SELECT COUNT(DISTINCT r.song) "
+            + "FROM Result r "
+            + "WHERE r.user = :user"
+    )
+    Long countDistinctSongIdByUser(User user);
 }
