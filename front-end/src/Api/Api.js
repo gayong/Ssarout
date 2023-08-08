@@ -3,10 +3,10 @@ import axios from "axios";
 axios.defaults.withCredentials = true;
 const Api = axios.create({
   // 이건 머지할때마다 바꿔줘야함
-  // baseURL: "https://i9e203.p.ssafy.io/",
+  baseURL: "https://i9e203.p.ssafy.io/",
 
   // 싸피에서 테스트할 때
-  baseURL: "http://192.168.30.124:8080",
+  // baseURL: "http://192.168.30.124:8080",
   headers: {
     "Content-Type": "application/json",
   },
@@ -23,7 +23,6 @@ Api.interceptors.response.use(
     if (error.response.status === 401) {
       try {
         const response = await Api.get("/api/v1/auth/refresh");
-        console.log("나중에 밑에 바꿔야함 : ", response.data);
         Api.defaults.headers.common.Authorization = `Bearer ${response.data.data}`;
         localStorage.setItem("token", response.data.data);
         error.config.headers.Authorization = `Bearer ${response.data.data}`;
