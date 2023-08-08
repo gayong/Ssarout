@@ -21,14 +21,21 @@ public class AmazonS3Uploader {
     @Value("${cloud.aws.s3.bucket}")
     private String bucket;
 
-    public String upload(MultipartFile multipartFile) throws IOException {
+    public String upload(MultipartFile multipartFile, String dir) throws IOException {
         File file = convert(multipartFile).orElseThrow(
             () -> new IllegalArgumentException("converting from MultipartFile to File failed."));
-        return upload(file);
+        return upload(file, dir);
     }
 
-    private String upload(File file) {
-        String fileName = UUID.randomUUID().toString() + ".mp3";
+    private String upload(File file, String dir) {
+        Optional<String> extension = getExtensionByStringHandling(
+            file.getName());
+        String fileName = dir + "/" + UUID.randomUUID();
+        if (extension.isPresent()) {
+            fileName += extension.get();
+        } else {
+            fileName += ".mp3";
+        }
         String uploadFileUrl = putS3(file, fileName);
         removeLocalFile(file);
         return uploadFileUrl;
@@ -40,7 +47,14 @@ public class AmazonS3Uploader {
     }
 
     private Optional<File> convert(MultipartFile multipartFile) throws IOException {
-        String fileName = UUID.randomUUID().toString() + ".mp3";
+        Optional<String> extension = getExtensionByStringHandling(
+            multipartFile.getName());
+        String fileName = String.valueOf(UUID.randomUUID());
+        if (extension.isPresent()) {
+            fileName += extension.get();
+        } else {
+            fileName += ".mp3";
+        }
         File convertFile = new File(System.getProperty("user.dir") + "/" + fileName);
         if (convertFile.createNewFile()) {
             try (FileOutputStream fos = new FileOutputStream(convertFile)) {
@@ -55,6 +69,12 @@ public class AmazonS3Uploader {
         if (file.delete()) {
             return;
         }
+    }
+
+    private Optional<String> getExtensionByStringHandling(String filename) {
+        return Optional.ofNullable(filename)
+            .filter(f -> f.contains("."))
+            .map(f -> f.substring(filename.lastIndexOf(".") + 1));
     }
 }
 
