@@ -2,11 +2,8 @@ import axios from "axios";
 
 axios.defaults.withCredentials = true;
 const Api = axios.create({
-  // 이건 머지할때마다 바꿔줘야함
-  // baseURL: "https://i9e203.p.ssafy.io/",
-
-  // 싸피에서 테스트할 때
-  baseURL: "http://192.168.30.124:8080",
+  // baseURL: "http://localhost:8080",
+  baseURL: "https://i9e203.p.ssafy.io/",
   headers: {
     "Content-Type": "application/json",
   },
@@ -39,4 +36,13 @@ Api.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+
+export const getSongs = (keyword) => {
+  // /api/v1/song 엔드포인트에 GET 요청
+  console.log("검색 키워드 전송:", keyword);
+  return Api.get('/api/v1/song', {
+    params: { keyword },
+  });
+};
+
 export default Api;
