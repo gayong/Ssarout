@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -39,6 +41,8 @@ public class Result {
     private User user;
 
     @Column(name = "ACCURACY")
+    @Min(0)
+    @Max(100)
     @NotNull
     private Integer accuracy;
 

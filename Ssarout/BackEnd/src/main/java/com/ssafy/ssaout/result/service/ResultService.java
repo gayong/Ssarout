@@ -40,7 +40,7 @@ public class ResultService {
     public void createResult(ResultCreateRequestDto resultCreateRequestDto, String userId,
         MultipartFile multipartFile) {
         try {
-            String recordFileUrl = amazonS3Uploader.upload(multipartFile);
+            String recordFileUrl = amazonS3Uploader.upload(multipartFile, "voice-file");
 
             Song song = songRepository.findById(resultCreateRequestDto.getSongId())
                 .orElseThrow(() -> new NotFoundException(
@@ -56,9 +56,7 @@ public class ResultService {
 
     public ResultsPerSongResponseDto getResultsPerSong(String userId) {
         User user = userRepository.findByUserId(userId);
-//        List<ResultPerSongResponseDto> resultList = resultRepository.findAllByUser(user)
-//            .stream().map(ResultPerSongResponseDto::new).collect(
-//                Collectors.toList());
+
         List<ResultPerSongResponseDto> resultPerSongResponseDtoList = resultRepository.findResultByUserGroupBySong(
             user);
 
