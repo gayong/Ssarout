@@ -15,6 +15,8 @@ import PublicRoute from './lib/PublicRoute';
 import PrivateRoute from './lib/PrivateRoute';
 import SingTest from '../src/test'
 import Analysis from './pages/Analysis';
+import Growth from './pages/Growth';
+
 // Private : 분석결과, 다시부르기 나중에 추가하기
 
 function App() {
@@ -88,7 +90,14 @@ function App() {
           }
         />
         
-        
+        <Route 
+          exact path="/growth/:songId/:title/:singer" 
+          element={
+            <PrivateRoute>
+              <Growth />  
+            </PrivateRoute>
+          }
+        />
 
       </Routes>
     </div>
