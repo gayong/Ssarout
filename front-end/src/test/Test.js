@@ -102,8 +102,8 @@ export class Test {
     this.drawer.start(notes);
     // console.log(notes);
   }
-  getBlobUrl(data){
-    this.detector.recording(data);
+  getBlobUrl(){
+    this.detector.recording();
     setTimeout(() =>{
       this.BlobUrl = this.detector.Url
     })
@@ -116,16 +116,13 @@ export class Test {
     let data = this.drawer.stop();
     // this.drawer.start([]);
     // this.detector.recording();
-    this.getBlobUrl(data)
-    setTimeout(()=>{
-      this.drawer.setStopRecord(false);
-
-    })
+    this.getBlobUrl()
+    this.drawer.setStopRecord(false);
     setTimeout(() => {
       console.log(this.BlobUrl)
       data.BlobUrl = this.BlobUrl
       window.localStorage.setItem("data", JSON.stringify(data))
-      // window.location.href="/analysis"
+      window.location.href="/analysis"
     });
   }
 
