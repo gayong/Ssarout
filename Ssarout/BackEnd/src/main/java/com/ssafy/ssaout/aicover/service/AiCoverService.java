@@ -23,6 +23,7 @@ import com.ssafy.ssaout.user.repository.UserRepository;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.configurationprocessor.json.JSONArray;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.http.HttpEntity;
@@ -106,18 +107,26 @@ public class AiCoverService {
     private void aiCoverRequestToFlaskServer(Long userSeq, Long aiCoverId,
         List<String> voiceFileUrlList, String singerVoiceFileUrl) throws JSONException {
 
-        ClientHttpRequestFactory httpRequestFactory =  new HttpComponentsClientHttpRequestFactory();
+        ClientHttpRequestFactory httpRequestFactory = new HttpComponentsClientHttpRequestFactory();
         RestTemplate restTemplate = new RestTemplate(httpRequestFactory);
+
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("userSeq", userSeq);
         jsonObject.put("aiCoverId", aiCoverId);
-        jsonObject.put("voiceFileUrlList", voiceFileUrlList);
+        JSONArray jsonArray = new JSONArray();
+        for (String url : voiceFileUrlList) {
+            jsonArray.put(url);
+        }
+        jsonObject.put("voiceFileUrlList", jsonArray);
         jsonObject.put("singerVoiceFileUrl", singerVoiceFileUrl);
-//        System.out.println("JSON: " + jsonObject.toString());
+
         HttpEntity<String> request = new HttpEntity<>(jsonObject.toString(), httpHeaders);
-        ResponseEntity response = restTemplate.exchange("http://34.87.63.236:5000/process_audio", HttpMethod.POST, request, String.class);
+        ResponseEntity<String> response = restTemplate.exchange("http://34.87.63.236:5000/process_audio",
+            HttpMethod.POST, request, String.class);
+
         if (!HttpStatus.OK.equals(response.getStatusCode())) {
             throw new ConnectionException(FAIL_CONNECTING_AI_SERVER);
         }
