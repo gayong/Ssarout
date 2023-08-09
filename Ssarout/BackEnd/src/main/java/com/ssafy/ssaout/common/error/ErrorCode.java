@@ -27,7 +27,8 @@ public enum ErrorCode {
 
     INVALID_AI_COVER_REQUEST_CONDITION(400, "AI 커버를 요청하기 위해선 최소 10개의 개별곡에 대한 녹음이 완료되어야 합니다."),
     AI_COVER_NOT_FOUND(404, "해당 AI 커버곡을 찾을 수 없습니다."),
-    FAIL_CONNECTING_AI_SERVER(500, "AI 서버와의 통신에 문제가 생겼습니다.");
+    FAIL_CONNECTING_AI_SERVER(500, "AI 서버와의 통신에 문제가 생겼습니다."),
+    FAIL_CONVERT_TO_JSON(500, "AI 서버에 요청하기 위한 데이터 변환에 실패했습니다.");
 
     private int status;
     private String message;

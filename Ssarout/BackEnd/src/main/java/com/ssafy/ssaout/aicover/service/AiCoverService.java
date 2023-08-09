@@ -2,6 +2,7 @@ package com.ssafy.ssaout.aicover.service;
 
 import static com.ssafy.ssaout.common.error.ErrorCode.AI_COVER_NOT_FOUND;
 import static com.ssafy.ssaout.common.error.ErrorCode.FAIL_CONNECTING_AI_SERVER;
+import static com.ssafy.ssaout.common.error.ErrorCode.FAIL_CONVERT_TO_JSON;
 import static com.ssafy.ssaout.common.error.ErrorCode.INVALID_AI_COVER_REQUEST_CONDITION;
 import static com.ssafy.ssaout.common.error.ErrorCode.SONG_NOT_FOUND;
 import static com.ssafy.ssaout.common.error.ErrorCode.USER_NOT_FOUND;
@@ -13,6 +14,7 @@ import com.ssafy.ssaout.aicover.dto.response.AiCoversResponseDto;
 import com.ssafy.ssaout.aicover.repository.AiCoverRepository;
 import com.ssafy.ssaout.common.error.exception.ConnectionException;
 import com.ssafy.ssaout.common.error.exception.InvalidRequestException;
+import com.ssafy.ssaout.common.error.exception.JsonException;
 import com.ssafy.ssaout.common.error.exception.NotFoundException;
 import com.ssafy.ssaout.result.domain.Result;
 import com.ssafy.ssaout.result.repository.ResultRepository;
@@ -82,7 +84,7 @@ public class AiCoverService {
         try {
             aiCoverRequestToFlaskServer(userSeq, aiCoverId, voiceFileUrlList, singerVoiceFileUrl);
         } catch (JSONException e) {
-            // 아 얘 어떻게 처리함
+            throw new JsonException(FAIL_CONVERT_TO_JSON);
         }
     }
 
@@ -124,7 +126,8 @@ public class AiCoverService {
         jsonObject.put("singerVoiceFileUrl", singerVoiceFileUrl);
 
         HttpEntity<String> request = new HttpEntity<>(jsonObject.toString(), httpHeaders);
-        ResponseEntity<String> response = restTemplate.exchange("http://34.87.63.236:5000/process_audio",
+        ResponseEntity<String> response = restTemplate.exchange(
+            "http://34.87.63.236:5000/process_audio",
             HttpMethod.POST, request, String.class);
 
         if (!HttpStatus.OK.equals(response.getStatusCode())) {

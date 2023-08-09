@@ -4,6 +4,7 @@ import com.ssafy.ssaout.common.error.exception.AWSException;
 import com.ssafy.ssaout.common.error.exception.ConflictException;
 import com.ssafy.ssaout.common.error.exception.ConnectionException;
 import com.ssafy.ssaout.common.error.exception.InvalidRequestException;
+import com.ssafy.ssaout.common.error.exception.JsonException;
 import com.ssafy.ssaout.common.error.exception.NotFoundException;
 import com.ssafy.ssaout.common.error.exception.OAuthProviderMissMatchException;
 import com.ssafy.ssaout.common.error.exception.TokenValidFailedException;
@@ -54,6 +55,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ConnectionException.class)
     public ResponseEntity<ErrorResponse> handleConnectionException(ConnectionException e) {
+        return handleException(e, e.getErrorCode());
+    }
+
+    @ExceptionHandler(JsonException.class)
+    public ResponseEntity<ErrorResponse> handleJsonException(JsonException e) {
         return handleException(e, e.getErrorCode());
     }
 
