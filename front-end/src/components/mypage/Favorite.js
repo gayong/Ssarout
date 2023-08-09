@@ -4,8 +4,7 @@ import styles from "./Favorite.module.css";
 import Api from '../../Api/Api';
 
 const Favorite = () => {
-  // const [favIds, setFavIds] = useState(""); // 즐겨찾기 한 songId들
-  const [favResults, setfavResults] = useState([]); // songId를 가지고 받아온 info
+  const [favResults, setfavResults] = useState([]);
 
   const getFav = async () => {
     try {
@@ -67,8 +66,6 @@ const Favorite = () => {
           />
         </div>
       ))}
-      {/* <br/> */}
-      <p className={styles.recordMent}>기록된 노래</p>
     </div>
   );
 };
