@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
-import { Link, redirect, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Api from '../../Api/Api';
 import styles from "./SearchResult.module.css";
 
@@ -31,7 +31,6 @@ const SearchResult = () => {
       }).then((response) => {
         console.log(response)
         // window.location.replace("/search");
-
         setSearchResults((prevResults) =>
           prevResults.map((item) =>
             item.songId === songId
@@ -39,7 +38,6 @@ const SearchResult = () => {
               : item
           )
         );
-
       })
     } catch (error) {
       console.error('Error:', error);
@@ -66,8 +64,18 @@ const SearchResult = () => {
           <img className={styles.albumcover} alt="" src={item.albumCoverImage} />
           <div className={styles.dataNBtn}>
             <p className={styles.titleNsinger}>{item.title} - {item.singer}</p>
-            <Link to="/record"><button className={styles.FullBtn}>완곡</button></Link>
-            <Link to="/record"><button className={styles.LineBtn}>소절</button></Link>
+            <Link to={{
+              pathname: `/record/${item.songId}`,
+              state: {
+                songId: item.songId,
+              },
+            }}><button className={styles.FullBtn}>완곡</button></Link>
+            <Link to={{
+              pathname: `/record/${item.songId}`,
+              state: {
+                songId: item.songId,
+              },
+            }}><button className={styles.LineBtn}>소절</button></Link>
           </div>
           <img
             className={styles.favImage}

@@ -76,7 +76,6 @@ function App() {
         <Route exact path="/nickNamePage" element={<NickNamePage />} />
         <Route exact path="/history" element={<History />} />
         <Route exact path="/record" element={<SingTest />} />
-        <Route exact path="/analysis" element={<Analysis />} />
 
       
         <Route 
