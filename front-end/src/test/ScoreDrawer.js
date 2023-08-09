@@ -54,6 +54,7 @@ export class ScoreDrawer {
   }
 
   start(notes) {
+
     this._playScore = notes.slice();
     this._elapsed = -1000;
 

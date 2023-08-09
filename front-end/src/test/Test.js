@@ -117,7 +117,6 @@ export class Test {
   
   playSong(notes) {
     this.drawer.start(notes);
-    // console.log(notes);
   }
   getBlobUrl(data){
     this.detector.recording(data);
@@ -128,10 +127,15 @@ export class Test {
   }
   // @autobind 데코레이터를 제거하고 바인딩된 메소드를 정의합니다.
   stopSong() {
-    console.log(this.songId)
     this.score = this.drawer.scores();
-
+    
     let data = this.drawer.stop();
+    
+    // 서버에서 실행 할 때는 주석해제
+    // data.notes = parseScore(this.response.lyrics)
+    
+    console.log(parseScore(this.songEditor.score))
+    data.notes = parseScore(this.songEditor.score)
     data.songId = this.songId.songId
 
     // this.drawer.start([]);
