@@ -7,7 +7,6 @@ const History = () => {
   return (
     <div>
       <Header/>
-      <h2>히스토리</h2>
       <HistoryCom/>
       <Footer/>
     </div>
