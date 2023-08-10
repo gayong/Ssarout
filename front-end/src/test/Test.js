@@ -1,12 +1,12 @@
-import { ScoreDrawer } from "./ScoreDrawer";
-import ToneDetector from "./ToneDetector";
-import ToneGenerator from "./ToneGenerator";
-import { Note, parseScore } from "./ScoreParser";
-import Sharer from "./Sharer";
+import { ScoreDrawer } from './ScoreDrawer';
+import ToneDetector from './ToneDetector';
+import ToneGenerator from './ToneGenerator';
+import { Note, parseScore } from './ScoreParser';
+import Sharer from './Sharer';
 
-import SongEditor from "./SongEditor";
-import createElem from "./DOMUtil";
-import Api from "../Api/Api";
+import SongEditor from './SongEditor';
+import createElem from './DOMUtil';
+import Api from '../Api/Api';
 
 const UPDATE_INTERVAL = 1000 / 60;
 
@@ -28,6 +28,8 @@ export class Test {
     this.response = null;
     this.loop = this.loop.bind(this);
     this.drawer = new ScoreDrawer();
+
+    this.songId = songId;
     this.createElements();
     appContainer.appendChild(this.wrapper);
     requestAnimationFrame(this.loop);
@@ -54,21 +56,21 @@ export class Test {
     this.wrapper = wrapper;
     this.bindEvents();
     document.body.appendChild(this.blind);
-    try{
-      this.response = await Api.get("api/v1/song/info", {params:{songId:9}});
+    try {
+      this.response = await Api.get('api/v1/song/info', { params: this.songId });
       this.response = this.response.data.data;
-      console.log(this.response)
 
-    }
-    catch(e){
-      console.error(e)
+      this.songEditor.setAudioURl(this.response.mrFile);
+      // console.log(this.response);
+    } catch (e) {
+      console.error(e);
     }
   }
 
   bindEvents() {
-    this.sharer.on("song-select", this.songSelected.bind(this));
+    this.sharer.on('song-select', this.songSelected.bind(this));
 
-    this.songEditor.on("play", async () => {
+    this.songEditor.on('play', async () => {
       if (!this.inited) return;
       this.detector.recording(); // 녹음 시작
       // setTimeout(() => { // 노래 시간에 따라 맞춰야함
@@ -85,23 +87,23 @@ export class Test {
         this.playSong(this.rerecordlyrics)
       }
     });
-    this.songEditor.on("stop", this.stopSong.bind(this));
-    this.songEditor.on("key-up", this.keyUp.bind(this));
-    this.songEditor.on("key-down", this.keyDown.bind(this));
-    this.songEditor.on("change", (prop, value) => {
+    this.songEditor.on('stop', this.stopSong.bind(this));
+    this.songEditor.on('key-up', this.keyUp.bind(this));
+    this.songEditor.on('key-down', this.keyDown.bind(this));
+    this.songEditor.on('change', (prop, value) => {
       switch (prop) {
-        case "melody":
+        case 'melody':
           this.toggleSound(value);
           break;
-        case "volume":
+        case 'volume':
           this.setVolume(value);
           break;
       }
     });
 
-    this.blind.addEventListener("click", async () => {
+    this.blind.addEventListener('click', async () => {
       await this.init();
-      this.blind.style.display = "none";
+      this.blind.style.display = 'none';
     });
   }
 
@@ -115,23 +117,21 @@ export class Test {
     this.detector = new ToneDetector(this.audio);
     // this.player = new ToneGenerator(this.audio);
 
-    this.detector.on("note", this.onNote.bind(this));
+    this.detector.on('note', this.onNote.bind(this));
     await this.detector.init();
     this.inited = true;
     this.drawer.inited();
   }
 
-  
   playSong(notes) {
     console.log(notes,"d요기요기요기")
     this.drawer.start(notes);
   }
-  getBlobUrl(data){
+  getBlobUrl(data) {
     this.detector.recording(data);
-    setTimeout(() =>{
-      this.BlobUrl = this.detector.Url
-    })
-    
+    setTimeout(() => {
+      this.BlobUrl = this.detector.Url;
+    });
   }
   // @autobind 데코레이터를 제거하고 바인딩된 메소드를 정의합니다.
   stopSong() {
@@ -148,11 +148,10 @@ export class Test {
 
     // this.drawer.start([]);
     // this.detector.recording();
-    this.getBlobUrl(data)
-    setTimeout(()=>{
+    this.getBlobUrl(data);
+    setTimeout(() => {
       this.drawer.setStopRecord(false);
-
-    })
+    });
     setTimeout(() => {
       // console.log(this.BlobUrl)
       data.BlobUrl = this.BlobUrl

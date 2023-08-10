@@ -1,4 +1,5 @@
-import Api from "../Api/Api";
+import Api from '../Api/Api';
+import toWav from 'audiobuffer-to-wav';
 class EventEmitter {
   constructor() {
     this.events = {};
@@ -60,24 +61,26 @@ class ToneDetector extends EventEmitter {
   }
 
   recording(data) {
-    this.data = data
-    console.log(this.data)
+    this.data = data;
+    console.log(this.data);
     if (!this.isRecording) {
       this.mediaRecorder = new MediaRecorder(this.stream);
-      
+
       this.mediaRecorder.ondataavailable = (event) => {
         this.audioArray.push(event.data); // 오디오 데이터가 취득될 때마다 배열에 담아둔다.
       };
-      
+
       // 이벤트핸들러: 녹음 종료 처리 & 재생하기
       this.mediaRecorder.onstop = async (event) => {
         // 녹음이 종료되면, 배열에 담긴 오디오 데이터(Blob)들을 합친다: 코덱도 설정해준다.
-        const blob = new Blob(this.audioArray, { type: "audio/wav" });
+        const audioBuffer = await this.convertWebmToWav(this.audioArray);
+        // const blob = new Blob(this.audioArray, { type: 'audio/wav' });
+        const blob = new Blob([audioBuffer], { type: 'audio/wav' });
         this.audioArray.splice(0); // 기존 오디오 데이터들은 모두 비워 초기화한다.
 
         // Blob 데이터에 접근할 수 있는 주소를 생성한다.
         const blobURL = window.URL.createObjectURL(blob);
-        this.sound = new File([blob], "soundBlob", {
+        this.sound = new File([blob], 'soundBlob.wav', {
           lastModified: new Date().getTime(),
           type: "audio",
         });
@@ -117,6 +120,12 @@ class ToneDetector extends EventEmitter {
     }
   }
 
+  async convertWebmToWav(chunks) {
+    const blob = new Blob(chunks, { type: 'audio/webm' });
+    const arrayBuffer = await blob.arrayBuffer();
+    const audioBuffer = await this.ctx.decodeAudioData(arrayBuffer);
+    return toWav(audioBuffer);
+  }
   getSound() {
     return this.sound;
   }
