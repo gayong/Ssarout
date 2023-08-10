@@ -16,6 +16,7 @@ import PrivateRoute from './lib/PrivateRoute';
 import SingTest from '../src/test'
 import Analysis from './pages/Analysis';
 import Growth from './pages/Growth';
+import RecordLine from './pages/RecordLine';
 
 // Private : 분석결과, 다시부르기 나중에 추가하기
 
@@ -79,6 +80,8 @@ function App() {
         <Route exact path="/history" element={<History />} />
         <Route exact path="/record/:songId" element={<SingTest />} />
         <Route exact path="/analysis" element={<Analysis />} />
+        <Route exact path="/recordline" element={<RecordLine />} />
+
 
       
         <Route 

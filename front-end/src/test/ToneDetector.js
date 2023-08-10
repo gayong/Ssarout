@@ -85,6 +85,8 @@ class ToneDetector extends EventEmitter {
         // console.log("sound : ", this.sound);
         // 여기에 로그인 중인지 아닌지 확인하는 조건문 필요
         this.Url = blobURL
+        let finalScore = 0
+        if(this.data.PitchScore > 0 && this.data.beatScore > 0){
         let finalScore = Math.ceil((this.data.PitchScore+this.data.beatScore)/2)
         let songId = this.data.songId
         if(localStorage.getItem('token')){
@@ -105,7 +107,7 @@ class ToneDetector extends EventEmitter {
         } catch (error) {
           alert.error(error);
         }
-      }};
+      }}};
 
       this.mediaRecorder.start();
       this.isRecording = true;

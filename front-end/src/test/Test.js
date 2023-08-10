@@ -11,7 +11,7 @@ import Api from "../Api/Api";
 const UPDATE_INTERVAL = 1000 / 60;
 
 export class Test {
-  constructor(appContainer,songId) {
+  constructor(appContainer,songId,rerecordlyrics) {
     this.detector = null;
     this.drawer = null;
     // this.player = null;
@@ -35,13 +35,13 @@ export class Test {
     this.soundFile = null;
     this.BlobUrl = ""
     this.songId = songId
+    this.rerecordlyrics = rerecordlyrics
     
   }
 
   async createElements() {
     this.blind = createElem("div", { class: "blind" }, "Click to start app");
     const wrapper = createElem("div", {});
-
     const canvasContainer = createElem("div", {});
     const canvas = this.drawer.renderElement();
     canvasContainer.appendChild(canvas);
@@ -73,10 +73,17 @@ export class Test {
       this.detector.recording(); // 녹음 시작
       // setTimeout(() => { // 노래 시간에 따라 맞춰야함
       // 서버 될때는 이걸로
-      // this.playSong(parseScore(this.response.lyrics));
-      // 로컬서버든 뭐든 서버 안될때는 이걸로 
-      this.playSong(parseScore(this.songEditor.score))
-      // }, 9100);
+      console.log(this.songEditor.score.length)
+      if(this.songEditor.score.length > 0){
+        // this.playSong(parseScore(this.response.lyrics));
+        // 로컬서버든 뭐든 서버 안될때는 이걸로 
+        this.playSong(parseScore(this.songEditor.score))
+        // }, 9100);
+      } else {
+        console.log(this.songEditor.score)
+        console.log(this.rerecordlyrics)
+        this.playSong(this.rerecordlyrics)
+      }
     });
     this.songEditor.on("stop", this.stopSong.bind(this));
     this.songEditor.on("key-up", this.keyUp.bind(this));
@@ -116,6 +123,7 @@ export class Test {
 
   
   playSong(notes) {
+    console.log(notes,"d요기요기요기")
     this.drawer.start(notes);
   }
   getBlobUrl(data){
@@ -148,9 +156,10 @@ export class Test {
     setTimeout(() => {
       // console.log(this.BlobUrl)
       data.BlobUrl = this.BlobUrl
-      window.localStorage.setItem("data", JSON.stringify(data))
-      window.location.href="/analysis"
-    });
+      if(this.songEditor.score.length > 0){
+        window.localStorage.setItem("data", JSON.stringify(data))
+        window.location.href="/analysis"
+      }});
   }
 
   // @autobind 데코레이터를 제거하고 바인딩된 메소드를 정의합니다.
