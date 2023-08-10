@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/commonUse/Header";
 import Footer from "../components/commonUse/Footer";
 import Favorite from "../components/mypage/Favorite";
+import RecordedSongs from "../components/mypage/RecordedSongs";
 import styles from "./MyPage.module.css";
 import Api from "../Api/Api";
 
@@ -37,6 +38,7 @@ const MyPage = () => {
         </div>
       </div>
       <Favorite/>
+      <RecordedSongs/>
       <br/><br/>
       <Link to="/singingAI" className={styles.singingAI}>
         AI가 불러주는 노래 들으러 가기

@@ -1,17 +1,17 @@
 import {React, useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
-import styles from "./Favorite.module.css";
+import styles from "./HistoryCom.module.css";
 import Api from '../../Api/Api';
 
-const Favorite = () => {
-  const [favResults, setfavResults] = useState([]);
+const History = () => {
+  const [historyResults, sethistoryResults] = useState([]);
 
-  const getFav = async () => {
+  const getHistory = async () => {
     try {
-      const response = await Api.get("/api/v1/fav");
+      const response = await Api.get("/api/v1/result/history");
       console.log(response.data.data);
       if (response.data && response.data.data && response.data.data.length > 0) {
-        setfavResults(response.data.data);
+        sethistoryResults(response.data.data);
       }
     } catch (error) {
       console.error(error);
@@ -40,17 +40,17 @@ const Favorite = () => {
   };
 
   useEffect(() => {
-    getFav();
+    getHistory();
   }, []);
 
   return (
     <div>
-      {favResults.length > 0 ? (
+      {historyResults.length > 0 ? (
         <p className={styles.favMent}>즐겨찾기</p>
       ) : (
         <p className={styles.favMent}>즐겨찾기가 없습니다.</p>
       )}
-      {favResults.map((item, index) => (
+      {historyResults.map((item, index) => (
         <div key={index} className={styles.favsongData}>
           <Link to={{
               pathname: `/record/${item.songId}`,
@@ -70,4 +70,4 @@ const Favorite = () => {
   );
 };
 
-export default Favorite;
+export default History;

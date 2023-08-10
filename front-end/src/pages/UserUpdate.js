@@ -54,7 +54,7 @@ const UpdatePage = () => {
         window.location.replace("/");
       });
     } catch (error) {
-      alert.error(error);
+      console.error(error);
     }
   };
 
