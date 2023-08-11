@@ -7,9 +7,8 @@ const Api = axios.create({
 
   // 집에서 테스트할 때
   // baseURL: "http://i9e203.p.ssafy.io:9090",
-
-  // 싸피에서 테스트할 때
-  // baseURL: "http://192.168.30.124:8080",
+  
+  
   headers: {
     "Content-Type": "application/json",
   },
