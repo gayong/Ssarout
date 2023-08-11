@@ -116,7 +116,7 @@ export class ScoreDrawer {
     // this._colors = []
     // console.log(this._colors)
     let data = {'PitchScore':PitchScore,"beatScore":beatScore, "scores":this._scores,"beat":this._beat }
-    this._scores = []
+    // this._scores = []
     return data;
   }
 

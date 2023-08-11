@@ -68,6 +68,7 @@ const LyricsBars = () => {
       lyricsTime[rerecord].startnode,
       lyricsTime[rerecord].endnode + 1
     );
+    const mrFile = data.mrUrl
     let lenrerecordlyrics = rerecordlyrics.length
     const starTime = rerecordlyrics[0].start
     for(let i = 0;i < lenrerecordlyrics; i++){
@@ -123,7 +124,7 @@ const LyricsBars = () => {
   return (
     <div>
           {Object.keys(rerecordlyrics).length > 0 ? (
-      <SingTest rerecordlyrics={rerecordlyrics} />
+      <SingTest rerecordlyrics={rerecordlyrics} mrFile={0}/>
     ) : (
       <Header />
     )}

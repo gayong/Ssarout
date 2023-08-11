@@ -90,7 +90,8 @@ class ToneDetector extends EventEmitter {
         this.Url = blobURL
         let finalScore = 0
         if(this.data.PitchScore > 0 && this.data.beatScore > 0){
-        let finalScore = Math.ceil((this.data.PitchScore+this.data.beatScore)/2)
+          let finalScore = Math.ceil((this.data.PitchScore+this.data.beatScore)/2)
+          console.log(this.Url,"여기 동영상 url")
         let songId = this.data.songId
         if(localStorage.getItem('token')){
         try {
