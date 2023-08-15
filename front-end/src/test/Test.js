@@ -67,7 +67,9 @@ export class Test {
     if (Object.keys(this.songId).length > 0){
       try {
         this.response = await Api.get('api/v1/song/info', { params: this.songId });
+        console.log(this.response,'API', "성공!")
         this.response = this.response.data.data;
+        console.log(this.response)
         this.songTitle = this.response.title
         this.singer = this.response.singer
 
@@ -170,8 +172,7 @@ export class Test {
   }
 
   playSong(notes) {
-    notes.forEach((element,idx) => {
-    });
+    console.log(notes,"d요기요기요기")
     this.drawer.start(notes);
   }
   getBlobUrl(data) {
@@ -190,6 +191,7 @@ export class Test {
     let data = this.drawer.stop();
     
     // 서버에서 실행 할 때는 주석해제 
+    console.log(this.songId,"표식표식표식")
     setTimeout(() => {
       this.drawer.setStopRecord(false);
     });
@@ -208,7 +210,7 @@ export class Test {
       if(data.PitchScore === NaN){
         return
       }
-      data.lyricsTime = this.songLineList
+      console.log(this.BlobUrl)
       data.songTitle = this.songTitle
       data.singer = this.singer
       // if(this.songEditor.score.length > 0){
