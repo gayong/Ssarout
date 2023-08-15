@@ -42,8 +42,6 @@ export class Test {
     this.pageOut = false;
 
 
-   
-    
     if (this.local !== null){
       if(this.local.mrUrl){
         console.log(this.local.mrUrl,"this.local")
@@ -66,16 +64,23 @@ export class Test {
     // wrapper.appendChild(this.sharer.render());
     this.wrapper = wrapper;
     this.bindEvents();
-    console.log(this.songId, typeof(this.songId), "durldfhslkfhjalkfjdklfjsl")
+    
     if (Object.keys(this.songId).length > 0){
       try {
         this.response = await Api.get('api/v1/song/info', { params: this.songId });
         console.log(this.response,'API', "성공!")
         this.response = this.response.data.data;
+        console.log(this.response)
         this.songTitle = this.response.title
         this.singer = this.response.singer
+
+        // 여기가 SongLineList 넣는곳
+        this.songLineList = this.response.songLineList
+
+        this.drawer.getLineLyrics(this.songLineList)
         // console.log(this.songTitle, this.singer)
         this.wrapper.appendChild(this.createSong(this.songTitle,this.singer))
+        
         this.songEditor.setAudioURl(this.response.mrFile);
         // console.log(this.response);
       } catch (e) {
@@ -83,6 +88,10 @@ export class Test {
       }
       
     }
+    const LineLyrics = document.createElement('p')
+    LineLyrics.id = "lineLyrics"
+    wrapper.appendChild(LineLyrics)
+    LineLyrics.textContent = ""
     wrapper.appendChild(document.createElement("br"));
     wrapper.appendChild(canvasContainer);
 
