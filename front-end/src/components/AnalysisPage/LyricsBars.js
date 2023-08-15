@@ -4,12 +4,8 @@ import SingTest from "../../test";
 import Header from "../commonUse/Header";
 import Api from "../../Api/Api";
 
-let data = localStorage.getItem("data");
-data = JSON.parse(data);
-const lyricsTime = data.lyricsTime
 
-
-const LyricsBar = ({ val, startTime, endTime, endNode, onClick,activeBar }) => {
+const LyricsBar = ({ val, startTime, endTime, endNode, onClick,activeBar,lyricsTime }) => {
   const timeInterval = endTime - startTime;
   const barStyle = {
     width: `${(timeInterval / lyricsTime[endNode].endTime) * 100}%`,
@@ -28,7 +24,9 @@ const LyricsBar = ({ val, startTime, endTime, endNode, onClick,activeBar }) => {
 };
 
 const LyricsBars = () => {
-
+  let data = localStorage.getItem("data");
+  data = JSON.parse(data);
+  const lyricsTime = data.lyricsTime
   const [rerecordlyrics, setRerecordLyrics] = useState({});
   const setRecord = (rerecordlyrics) =>{
     setRerecordLyrics(rerecordlyrics)
@@ -147,6 +145,7 @@ const LyricsBars = () => {
                   val={timeInfo.val}
                   onClick={onClick}
                   activeBar={activeBar}
+                  lyricsTime={lyricsTime}
                 />
               ))}
             </div>
