@@ -8,7 +8,7 @@ import Api from "../../Api/Api";
 const LyricsBar = ({ val, startTime, endTime, endNode, onClick,activeBar,lyricsTime }) => {
   const timeInterval = endTime - startTime;
   const barStyle = {
-    width: `${(timeInterval / lyricsTime[endNode].endTime) * 100}%`,
+    width: `${(timeInterval / lyricsTime[endnode].endtime) * 100}%`,
     height: "10px",
     borderRadius: "30px",
     opacity: 0.7,
@@ -19,7 +19,7 @@ const LyricsBar = ({ val, startTime, endTime, endNode, onClick,activeBar,lyricsT
 
 
   return (
-    <button className="lyrics-bar" style={barStyle} onClick={() => onClick(endNode, endTime)}></button>
+    <button className="lyrics-bar" style={barStyle} onClick={() => onClick(endnode, endTime)}></button>
   );
 };
 
@@ -32,10 +32,10 @@ const LyricsBars = () => {
     setRerecordLyrics(rerecordlyrics)
   }
   const [activeBar, setActiveBar] = useState(null);
-  const onClick = (endNode, endTime) => {
-    let rerecord = endNode;
-    for (let i = 0; i < endNode + 1; i++) {
-      if (lyricsTime[i].endTime === endTime) {
+  const onClick = (endnode, endTime) => {
+    let rerecord = endnode;
+    for (let i = 0; i < endnode + 1; i++) {
+      if (lyricsTime[i].endtime === endTime) {
         rerecord = i;
         break;
       }
@@ -50,8 +50,8 @@ const LyricsBars = () => {
     let data = localStorage.getItem("data");
     data = JSON.parse(data);
     let rerecordlyrics = data.notes.slice(
-      lyricsTime[rerecord].startNode,
-      lyricsTime[rerecord].endNode + 1
+      lyricsTime[rerecord].startnode,
+      lyricsTime[rerecord].endnode + 1
     );
     const mrFile = data.mrUrl
     let lenrerecordlyrics = rerecordlyrics.length
@@ -62,6 +62,7 @@ const LyricsBars = () => {
     const ly = Object()
     ly.rerecordlyrics = rerecordlyrics
     ly.startTime = startTime
+    console.log(ly,'여기만 하면 가사는 끝!')
     localStorage.setItem('ly',JSON.stringify(ly))
     setRecord(rerecordlyrics)
     setTimeout(() =>{
@@ -79,7 +80,8 @@ const LyricsBars = () => {
     })
   };
 
-
+  let data = localStorage.getItem("data");
+  data = JSON.parse(data);
 
   let idx = data.scores.findIndex((score) => score === -1);
   if (idx === -1) {
@@ -88,21 +90,21 @@ const LyricsBars = () => {
     idx = idx - 1;
   }
   let nodeidx = lyricsTime.findIndex(
-    (time) => time.startNode <= idx && time.endNode >= idx
+    (time) => time.startnode <= idx && time.endnode >= idx
   );
   const resultArray = [];
   for (let i = 0; i <= nodeidx; i++) {
     let bad = 0;
-    for (let j = lyricsTime[i].startNode; j <= lyricsTime[i].endNode; j++) {
+    for (let j = lyricsTime[i].startnode; j <= lyricsTime[i].endnode; j++) {
       if (data.scores[j] === "bad") {
         bad += 1;
       }
     }
     resultArray.push({
-      val: bad < (lyricsTime[i].endNode - lyricsTime[i].startNode + 1) / 2,
-      startTime: lyricsTime[i].startTime,
-      endTime: lyricsTime[i].endTime,
-      endNode: nodeidx,
+      val: bad < (lyricsTime[i].endnode - lyricsTime[i].startnode + 1) / 2,
+      startTime: lyricsTime[i].starttime,
+      endTime: lyricsTime[i].endtime,
+      endnode: nodeidx,
     });
   }
   
@@ -141,7 +143,7 @@ const LyricsBars = () => {
                   key={index}
                   startTime={timeInfo.startTime}
                   endTime={timeInfo.endTime}
-                  endNode={timeInfo.endNode}
+                  endnode={timeInfo.endnode}
                   val={timeInfo.val}
                   onClick={onClick}
                   activeBar={activeBar}
