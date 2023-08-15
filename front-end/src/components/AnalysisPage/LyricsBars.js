@@ -39,7 +39,6 @@ const LyricsBars = () => {
         rerecord = i;
         break;
       }
-      // console.log(activeBar,"여기는 activeBar")
     }
     if (endTime === activeBar) {
       setActiveBar(null);

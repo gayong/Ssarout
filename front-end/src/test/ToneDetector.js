@@ -85,8 +85,6 @@ class ToneDetector extends EventEmitter {
           lastModified: new Date().getTime(),
           type: "audio",
         });
-        // console.log(blobURL);
-        // console.log("sound : ", this.sound);
         // 여기에 로그인 중인지 아닌지 확인하는 조건문 필요
         this.Url = blobURL
         let finalScore = 0

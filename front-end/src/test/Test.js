@@ -44,7 +44,6 @@ export class Test {
 
     if (this.local !== null){
       if(this.local.mrUrl){
-        console.log(this.local.mrUrl,"this.local")
         this.songEditor.setAudioURl(this.local.mrUrl);
       }
     }

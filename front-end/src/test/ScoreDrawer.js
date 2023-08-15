@@ -197,18 +197,9 @@ export class ScoreDrawer {
         ctx.fillStyle = '#DDDDDD';
       } else {
         if (this._scores[index] === -1) {
-          // console.log(note.start)
           let t = Math.floor(this._elapsed - (note.start + note.length - fps));
-          // console.log(halfLength)
           const len = this._colors.length;
-          // console.log(t)
           let st = len - Math.floor(width / 2);
-
-          // console.log(len)
-          // console.log(st)
-          // console.log(this._colors,"여기가 this._colors")  // 이코드 들이 이해가 안가
-
-          // console.log(this._colors.slice(st,len),"여기가 slice") // 이코드들이 이해가 안돼
           const scoreArray = this._colors.slice(st, len);
           const timeArray = this._colors.slice(st, st + 4);
           let BlackCount = 0;
