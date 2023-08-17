@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const OauthRedirect = () =>{
@@ -10,7 +10,7 @@ const OauthRedirect = () =>{
     window.location.replace("/");
   }, []);
 
-  return <>유저프로필</>;
+  return <>유저프로필</>
 }
 
 export default OauthRedirect

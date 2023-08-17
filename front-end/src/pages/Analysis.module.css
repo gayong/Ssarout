@@ -1,0 +1,64 @@
+.pitchMent {
+    margin-bottom: 2px;
+}
+
+.beatMent {
+    margin-top: 5px;
+}
+
+.toMainPageBtn {
+    background-color: transparent;
+    border: dashed 1px white;
+    border-radius: 40px;
+    color: white;
+    padding-top: 3px;
+    margin-bottom: 40px;
+}
+
+.toMainMent {
+    color: white;
+    text-decoration: none;
+    font-family: 'lineTh';
+    font-size: 0.7rem;
+}
+
+.praticeMent {
+    font-size: 0.8rem;
+    font-family: 'lineTh';
+}
+
+
+/* .box {
+    background: linear-gradient(-45deg, #ee7752, #e05b8e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 25s ease infinite;
+    overflow: hidden;
+  } */
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .questIcon {
+    width: 24px;
+    height: 22px;
+    margin-top: 8px;
+    margin-left: 3px;
+  }
+
+  .mentNquest {
+    display: flex;
+    justify-content: center;
+  }
+
+  .questMent {
+    font-family: 'lineRg';
+  }

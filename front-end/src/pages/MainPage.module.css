@@ -1,13 +1,3 @@
-.div1 {
-  /* position: relative; */
-  font-size: 23px;
-  letter-spacing: -0.05em;
-  font-family: var(--font-hs);
-  display: inline-block;
-  justify-content: center;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
 .child {
   height: 0.16%;
   width: 84.17%;
@@ -76,12 +66,6 @@
 .stateLayer1 {
   align-items: center;
   justify-content: center;
-}
-.container {
-  border-radius: var(--br-81xl);
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
 }
 .leadingIcon {
   width: 48px;
@@ -182,25 +166,73 @@
   text-align: center;
   font-size: var(--font-size-mini);
   color: black;
-  font-family: var(--font-line-seed-sans-kr);
+  font-family: 'lineRg';
 }
 
-.headerContainer {
-  display: flex;
-  justify-content: space-between;
+.container {
+  min-height:calc(100vh - 24.8vh);
+}
+
+/* .homecontainer {
+  min-height:calc(100vh - 90px);
+} */
+
+.searchMent {
+  color: white;
+  font-size: 17px;
+  letter-spacing: -0.5px;
+  /* margin-bottom: 0.2rem; */
+}
+
+.footer {
+  position: relative;
+  transform: translateY(0%);
+  height: 30px;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  align-self: center;
   align-items: center;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+  /* height: 90px;
+  position: relative;
+  transform: translateY(0%);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; */
+.footerMent {
+  font-size: 10px;
+  color: white;
+  /* display: flex; */
   text-align: center;
-  padding: 10px;
+  align-items: center;
+
 }
 
-.logoContainer {
-  flex: 1; /* 로고를 중앙에 정렬 */
-  text-align: center;
-  margin-left: auto;
+.footerLine {
+  width: 90%;
+  opacity: 0.7;
+  display: flex;
 }
 
+.notice {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
 
-/* 사이드바가 열렸을 때 뒤의 배경색을 지정 */
-.bm-menu-wrap.bm-menu-open {
-  background-color: rgba(0, 0, 0, 0.5); /* 배경색을 투명도가 있는 검은색으로 변경 */
+.noticeMent {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  margin-left: 0.5rem;
+  color : white;
+  font-family: 'lineTh';
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.questMent {
+  font-family: 'lineRg';
 }

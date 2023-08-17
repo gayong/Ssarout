@@ -1,0 +1,73 @@
+.updateBackBtn {
+  align-items: start;
+  text-decoration: none;
+  border: solid 1px white;
+  border-radius: 30px;
+  background-color: transparent;
+  display: flex;
+  justify-content: start;
+  margin-left: 30px;
+}
+
+/* 뒤로가기 링크 */
+.updateBackA {
+  text-decoration: none;
+  color: white;
+  font-family: 'lineRg';
+  display: flex;
+  justify-content: center;
+  padding-top: 3px;
+}
+
+.pageTitle {
+  margin-bottom: 5px;
+}
+
+.aiContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 앨범아트 */
+.aiAlbumcover {
+  display: inline;
+  width: 130px;
+  height: 130px;
+  margin: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 재생버튼 */
+.playBtn {
+  width: 50px;
+  height: 50px;
+  margin-left: 50px;
+  margin-top: 50px;
+  position: absolute;
+  z-index: 2;
+}
+
+/* 합친거 */
+.aiData {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 300;
+  /* display: inline;
+  justify-content: space-evenly; */
+}
+
+.titleNsinger {
+  display: inline;
+  width: 130px;
+  margin: 10px;
+  margin-top: 0;
+  font-family: 'lineTh';
+}
+
+.container {
+  min-height:calc(100vh - 88px);
+}

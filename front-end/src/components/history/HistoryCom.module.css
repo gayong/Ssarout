@@ -1,0 +1,50 @@
+.pageTitle {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-family: 'lineRg';
+  font-size: 1.2rem;
+}
+
+.historyMent {
+  margin-top: 0.2rem;
+  margin-bottom: 0.8rem;
+  font-family: 'lineTh';
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.hisAlbumcover {
+  display: inline;
+  width: 130px;
+  height: 130px;
+  margin: 10px;
+}
+
+.hisData {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 300;
+}
+
+.titleNsinger {
+  display: inline;
+  width: 130px;
+  margin: 10px;
+  margin-top: 0;
+  font-family: 'lineTh';
+}
+
+.historyContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nohisMent {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
