@@ -49,6 +49,7 @@ public class UserService {
         User user = userRepository.findByUserId(userId);
 
         user.setNickname(userInfoDto.getNickname());
+//        user.setProfileImageUrl(userInfoDto.getProfileImageUrl());
         userRepository.save(user);
 
         return user;
@@ -71,6 +72,16 @@ public class UserService {
         userRepository.delete(user);
         userRefreshTokenRepository.deleteByUserId(userId);
     }
+
+//    public User createNickname(String userId, UserInfoDto userInfoDto) {
+//        User user = userRepository.findByUserId(userId);
+//
+//        user.setNickname(userInfoDto.getNickname());
+//        user.setProfileImageUrl(userInfoDto.getProfileImageUrl());
+//        userRepository.save(user);
+//
+//        return user;
+//    }
 
     private void unlinkKakaoUser(User user) {
         ClientHttpRequestFactory httpRequestFactory = new HttpComponentsClientHttpRequestFactory();

@@ -16,6 +16,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+//@Table(name = "Favorite")
 @Table(name = "Favorite", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"USER_SEQ", "SONG_ID"})
 })
@@ -29,7 +30,9 @@ public class Favorite {
     /**
      * 유저 아이디
      */
+    //@Column(name = "USER_ID", length = 64, unique = true)
     @NotNull
+    //@Size(max = 64)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="USER_SEQ")
     private User userId;
@@ -37,7 +40,9 @@ public class Favorite {
     /**
      * 노래 아이디
      */
+    //@Column(name = "CONTENT_ID", length = 64, unique = true)
     @NotNull
+    //@Size(max = 64)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="SONG_ID")
     private Song contentId;
