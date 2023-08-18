@@ -1,0 +1,53 @@
+.favAlbumcover {
+  width: 24vw;
+  height: 24vw;
+  position: relative;
+  margin-bottom: 0.5rem;
+  z-index: 1;
+}
+
+.favImage {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 2;
+  margin-left: -22px;
+  margin-top: 2px;
+}
+
+.favsongData {
+  display: inline;
+  justify-content: flex-start;
+  float: left;
+  margin-right: 6vw;
+}
+
+.favTotal {
+  float: left;
+  display: inline;
+  margin-left: 8vw;
+  width: 90vw;
+  max-width: 90vw;
+}
+
+.titleNsinger {
+  margin-left: 0;
+  margin-bottom: 4px;
+  margin-top: 8px;
+  max-width: 160px;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+.dataNBtn {
+  display: block;
+  text-align: start;
+}
+
+.favMent {
+  font-size: 1rem;
+  text-align: start;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}

@@ -1,0 +1,34 @@
+.updateBackBtn {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-decoration: none;
+  border: solid 1px white;
+  border-radius: 30px;
+  background-color: transparent;
+  display: flex;
+  justify-content: start;
+  padding-top: 3px;
+}
+
+.updateBackA {
+  text-decoration: none;
+  color: white;
+  font-family: 'lineRg';
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 3px;
+}
+
+
+.recordTitle {
+  font-size: 1.2rem;
+  margin-top: 4rem;
+  font-family: 'lineTh';
+  padding: 0 1rem;
+}
+
+.growthContainer {
+  max-height: calc(100vh - 30px);
+}
