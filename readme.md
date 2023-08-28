@@ -23,6 +23,8 @@
 
 ## 개발 환경
 
+<div align=center>
+
 ### Back-end
 <p align="center" data-align="center">
 <img align="center" src="https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=springboot&logoColor=white"/>
@@ -69,22 +71,16 @@
 <img src="https://img.shields.io/badge/jira-0052CC?style=flat-square&logo=jira&logoColor=white">
 <img src="https://img.shields.io/badge/notion-000000?style=flat-square&logo=notion&logoColor=white">
 <img src="https://img.shields.io/badge/gitlab-FC6D26?style=flat-square&logo=gitlab&logoColor=white">
-</p>
-
-
-
+</p>  
+<br/>
+</div>
 
 ## 기능 소개
 
 - SNS 로그인
-  - 최초 1회 닉네임 설정 필수
-    - 빈 값 입력 비허용
-
 - 노래 부르기
   - 선택한 노래에 대한 MR과 가사 제공
   - 푸리에 변환을 활용해 사용자의 노래 음정 표출
-    - MR 음정보다 높은 경우 빨간색으로 캔버스에 찍힘
-    - 낮은 경우 파란색으로 캔버스에 찍힘
   - MR의 음정을 캔버스 위 퍼펙트 스코어 형태로 제공
   - 재생 버튼과 함께 MR 음성과 캔버스 시작
   - 정지 버튼으로 녹음을 마칠 수 있음
@@ -317,7 +313,7 @@
   <img title="" src="readme_assets/e8b66bdba4b2bb21ce1eb4ea6c83ab10df13c467.png" alt="규렬2.png" width="16%">
   <img src="readme_assets/891ec9260ef6577cd2b33f560dd7009e2c3d418a.png" title="" alt="가영2.png" width="16%">
   <img src="readme_assets/e79b53f1c683c2a6553439ac7543f26d8df15989.png" title="" alt="세울2.png" width="16%">
-  <img src="readme_assets/ef6b56c0c9f96f7cd86d5a30300e368ade8b1911.png" title="" alt="세진2.png" width="16%">
+  <img src="readme_assets/sejin.png" title="" alt="세진2.png" width="16%">
 </p>
 <div style="display:flex; justify-content:space-between" align="center" data-align="center">
   <span>공정민</span>
