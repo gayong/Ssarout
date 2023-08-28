@@ -2,10 +2,8 @@
 **SSAFY 9기 2학기 공통 프로젝트 - 싸:라웃**
  [UCC 보러가기](https://youtu.be/fpCaXvi1ilU)  
 <br/>
-
 ## 서비스 소개
 ### 개요
-
 - 서비스 명 : 싸:라웃
 - 뜻 : `SSAFY`에다 영단어 `Shout out`을 결합한 것으로, 자신의 노래 실력을 맘껏 외치고 뽐내라는 의미
 - 기획의도 : 노래방에 가지 않고도 노래 연습을 할 수 있고, 실력을 확인할 수 있는 서비스를 제공하자
@@ -20,9 +18,7 @@
 
 ## 프로젝트 진행 기간
 
-23.07.10(월) ~ 23.08.18(금)
-
-SSAFY 9기 2학기 공통 프로젝트 - 싸:라웃  
+23.07.10(월) ~ 23.08.18(금)  
 <br/>
 
 ## 개발 환경
@@ -325,9 +321,9 @@ SSAFY 9기 2학기 공통 프로젝트 - 싸:라웃
 </p>
 <div style="display:flex; justify-content:space-between" align="center" data-align="center">
   <span>공정민</span>
-  <span>공정민</span>
-  <span>공정민</span>
-  <span>공정민</span>
-  <span>공정민</span>
-  <span>공정민</span>
+  <span>김창혁</span>
+  <span>심규렬</span>
+  <span>이가영</span>
+  <span>이세울</span>
+  <span>황세진</span>
 </div>
