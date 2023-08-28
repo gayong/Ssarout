@@ -1,109 +1,84 @@
-# <싸:라웃> - 음성 분석을 통한 AI 보컬 트레이닝🔊🎶
-
-**팀원 : 공정민, 김창혁, 심규렬, 이가영, 이세울, 황세진**
-
-## [UCC](https://youtu.be/fpCaXvi1ilU)
-
----
-
-## 프로젝트 진행 기간
-
----
-
-23.07.10(월) ~ 23.08.18(금)
-
-SSAFY 9기 2학기 공통 프로젝트 - 싸:라웃
-
-## 개발 환경
-
----
-
-### Back-end
-
-https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=springboot&logoColor=white
-
-```html
-<p align="center">
-<img src="<https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=springboot&logoColor=white>"/>
-<img src="<https://img.shields.io/badge/springsecurity-6DB33F?style=flat-square&logo=springsecurity&logoColor=white>"/>
-<img src="<https://img.shields.io/badge/OAuth-000000?style=flat-square&logo=OAuth&logoColor=white>"/>
-<img src="<https://img.shields.io/badge/Java-007396?style=flat-square&logo=OpenJDK&logoColor=white>"/>
-</p>
-```
-
-### Front-end
-
-```html
-<p align="center">
-<img src="<https://img.shields.io/badge/react-339933?style=flat-square&logo=react&logoColor=white>">
-<img src="<https://img.shields.io/badge/reactrouter-CA4245?style=flat-square&logo=reactrouter&logoColor=white>">
-<img src="<https://img.shields.io/badge/node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white>">
-<img src="<https://img.shields.io/badge/Javascript-F7DF1e?style=flat-square&logo=javascript&logoColor=white>"/>
-<img src="<https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white>"/>
-</p>
-```
-
-### DB
-
-```html
-<p align="center">
-<img src="<https://img.shields.io/badge/mysql-4479A1?style=flat-square&logo=mysql&logoColor=white>"> 
-<img src="<https://img.shields.io/badge/amazons3-569A31?style=flat-square&logo=amazons3&logoColor=white>">
-<img src="<https://img.shields.io/badge/redis-DC382D?style=flat-square&logo=redis&logoColor=white>">
-</p>
-```
-
-### Dev-Ops
-
-```html
-<p align="center">
-<img src="<https://img.shields.io/badge/amazonec2-FF9900?style=flat-square&logo=amazonec2&logoColor=white>"/>
-<img src="<https://img.shields.io/badge/jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white>"/>
-<img src="<https://img.shields.io/badge/docker-2496ED?style=flat-square&logo=docker&logoColor=white>"/>
-<img src="<https://img.shields.io/badge/nginx-009639?style=flat-square&logo=nginx&logoColor=white>"/>
-</p>
-```
-
-### AI 관련
-
-```html
-<p align="center">
-<img src="<https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white>"/>
-<img src="<https://img.shields.io/badge/googlecloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white>"/>
-<img src="<https://img.shields.io/badge/flask-000000?style=flat-square&logo=flask&logoColor=white>"/>
-</p>
-```
-
-### 협업 tool
-
-```html
-<p align="center">
-<img src="<https://img.shields.io/badge/figma-F24E1E?style=flat-square&logo=figma&logoColor=white>">
-<img src="<https://img.shields.io/badge/jira-0052CC?style=flat-square&logo=jira&logoColor=white>">
-<img src="<https://img.shields.io/badge/notion-000000?style=flat-square&logo=notion&logoColor=white>">
-<img src="<https://img.shields.io/badge/gitlab-FC6D26?style=flat-square&logo=gitlab&logoColor=white>">
-</p>
-```
+# <싸:라웃> - 음성 분석을 통한 AI 보컬 트레이닝🎤🎵
+**SSAFY 9기 2학기 공통 프로젝트 - 싸:라웃**
+ [UCC 보러가기](https://youtu.be/fpCaXvi1ilU)  
+<br/>
 
 ## 서비스 소개
-
----
-
 ### 개요
 
-- 한 줄 소개 : 스스로 노래 연습을 할 수 있고, 확인할 수 있는 서비스를 제공하자
 - 서비스 명 : 싸:라웃
 - 뜻 : `SSAFY`에다 영단어 `Shout out`을 결합한 것으로, 자신의 노래 실력을 맘껏 외치고 뽐내라는 의미
+- 기획의도 : 노래방에 가지 않고도 노래 연습을 할 수 있고, 실력을 확인할 수 있는 서비스를 제공하자
 
 ### 타겟
 
-- 본인의 노래 실력을 늘리고 싶은 사람들
-- AI를 통해 본인의 목소리로 들려보고 싶은 사람들
-- 얼만큼 노래를 잘 따라하는지 궁금한 사람들
+- 노래 실력을 키우고 싶은 사람들
+- 노래별로 음정, 박자 점수를 받고 성장그래프로 확인하고 싶은 사람들
+- 틀린 구간만 따로 연습해보고 싶은 사람들
+- AI가 내 목소리로 부른 노래를 들어보고 싶은 사람들
+<br/>
+
+## 프로젝트 진행 기간
+
+23.07.10(월) ~ 23.08.18(금)
+
+SSAFY 9기 2학기 공통 프로젝트 - 싸:라웃  
+<br/>
+
+## 개발 환경
+
+### Back-end
+<p align="center" data-align="center">
+<img align="center" src="https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=springboot&logoColor=white"/>
+<img align="center" src="https://img.shields.io/badge/springsecurity-6DB33F?style=flat-square&logo=springsecurity&logoColor=white"/>
+<img align="center" src="https://img.shields.io/badge/OAuth-000000?style=flat-square&logo=OAuth&logoColor=white"/>
+<img align="center" src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=OpenJDK&logoColor=white"/>
+</p>
+
+
+### Front-end
+<p align="center">
+<img src="https://img.shields.io/badge/react-339933?style=flat-square&logo=react&logoColor=white">
+<img src="https://img.shields.io/badge/reactrouter-CA4245?style=flat-square&logo=reactrouter&logoColor=white">
+<img src="https://img.shields.io/badge/node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white">
+<img src="https://img.shields.io/badge/Javascript-F7DF1e?style=flat-square&logo=javascript&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>
+</p>
+
+### DB
+<p align="center">
+<img src="https://img.shields.io/badge/mysql-4479A1?style=flat-square&logo=mysql&logoColor=white"> 
+<img src="https://img.shields.io/badge/amazons3-569A31?style=flat-square&logo=amazons3&logoColor=white">
+<img src="https://img.shields.io/badge/redis-DC382D?style=flat-square&logo=redis&logoColor=white">
+</p>
+
+### Dev-Ops
+<p align="center">
+<img src="https://img.shields.io/badge/amazonec2-FF9900?style=flat-square&logo=amazonec2&logoColor=white"/>
+<img src="https://img.shields.io/badge/jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white"/>
+<img src="https://img.shields.io/badge/docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+<img src="https://img.shields.io/badge/nginx-009639?style=flat-square&logo=nginx&logoColor=white"/>
+</p>
+
+### AI 관련
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/>
+<img src="https://img.shields.io/badge/googlecloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white"/>
+<img src="https://img.shields.io/badge/flask-000000?style=flat-square&logo=flask&logoColor=white"/>
+</p>
+
+### 협업 tool
+<p align="center">
+<img src="https://img.shields.io/badge/figma-F24E1E?style=flat-square&logo=figma&logoColor=white">
+<img src="https://img.shields.io/badge/jira-0052CC?style=flat-square&logo=jira&logoColor=white">
+<img src="https://img.shields.io/badge/notion-000000?style=flat-square&logo=notion&logoColor=white">
+<img src="https://img.shields.io/badge/gitlab-FC6D26?style=flat-square&logo=gitlab&logoColor=white">
+</p>
+
+
+
 
 ## 기능 소개
-
----
 
 - SNS 로그인
   - 최초 1회 닉네임 설정 필수
@@ -174,21 +149,16 @@ https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=springboot
 
 ## 화면구현
 
----
-
-```html
 <p align="center">
   <img src="readme_assets/96be658f32778beafebf3b597734aaca8624a4a9.gif" align="center" width="32%">
   <img src="readme_assets/06a9da4b3c619b79c2004f176e3a834cb2cc47b5.gif" align="center" width="32%">
   <img src="readme_assets/12205e3e3dc24124ec4cac9f17367f3f44d58d29.gif" align="center" width="32%">
 </p>
-```
 
 ## 
 
 ## 시스템 아키텍처
 
----
 
 ![image (11).png](readme_assets/52a9e5c563f6ccd1cf5261eac5d5c233703ed8b2.png)
 
@@ -198,7 +168,6 @@ https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=springboot
 
 ## 프로젝트 구조도
 
---------------
 
 ```
 📦공통PJT_주석 살린 버전
@@ -344,38 +313,21 @@ https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=springboot
 
 
 
-## 역할
+## 팀원
 
------
-
-<img title="" src="readme_assets/080be8c5e134db725701d319f0a0fa02bff45171.png" alt="규렬1.png" width="113">
-
-<img title="" src="readme_assets/e8b66bdba4b2bb21ce1eb4ea6c83ab10df13c467.png" alt="규렬2.png" width="93">
-
-# 심규렬과
-
-<img src="readme_assets/964db49bf00fa202b982f9baf1415527f38247d5.png" title="" alt="창혁1.png" width="96">
-
-<img src="readme_assets/c7849260d7b5c279bd9a33c1fc8e42a071f69e28.png" title="" alt="세울1.png" width="96">
-
-<img src="readme_assets/a3c7573d1422e1c49817680e81741fc7d3ac6648.png" title="" alt="가영1.png" width="92">
-
-<img src="readme_assets/507f104921b28aa27fcb111a269656a8528db010.png" title="" alt="정민1.png" width="85">
-
-<img title="" src="readme_assets/58f9169b96438b77fbde1184108d54e8dc8f35e3.png" alt="창혁2.png" width="103">
-
-<img src="readme_assets/ef6b56c0c9f96f7cd86d5a30300e368ade8b1911.png" title="" alt="세진2.png" width="103">
-
-<img src="readme_assets/e79b53f1c683c2a6553439ac7543f26d8df15989.png" title="" alt="세울2.png" width="91">
-
-
-
-<img src="readme_assets/e0e19c4c802ee401226ad25930ea6b993ced94b5.png" title="" alt="정민2.png" width="97">
-
-<img src="readme_assets/891ec9260ef6577cd2b33f560dd7009e2c3d418a.png" title="" alt="가영2.png" width="87">
-
-<img title="" src="readme_assets/730f86002b32c17d7fbd17b814f686af052625c1.png" alt="세진1.png" width="95" data-align="left">
-
-# 아이들
-
-
+<p align="center" data-align="center">
+  <img src="readme_assets/e0e19c4c802ee401226ad25930ea6b993ced94b5.png" title="" alt="정민2.png" width="16%">
+  <img title="" src="readme_assets/58f9169b96438b77fbde1184108d54e8dc8f35e3.png" alt="창혁2.png" width="16%">
+  <img title="" src="readme_assets/e8b66bdba4b2bb21ce1eb4ea6c83ab10df13c467.png" alt="규렬2.png" width="16%">
+  <img src="readme_assets/891ec9260ef6577cd2b33f560dd7009e2c3d418a.png" title="" alt="가영2.png" width="16%">
+  <img src="readme_assets/e79b53f1c683c2a6553439ac7543f26d8df15989.png" title="" alt="세울2.png" width="16%">
+  <img src="readme_assets/ef6b56c0c9f96f7cd86d5a30300e368ade8b1911.png" title="" alt="세진2.png" width="16%">
+</p>
+<div style="display:flex; justify-content:space-between" align="center" data-align="center">
+  <span>공정민</span>
+  <span>공정민</span>
+  <span>공정민</span>
+  <span>공정민</span>
+  <span>공정민</span>
+  <span>공정민</span>
+</div>
