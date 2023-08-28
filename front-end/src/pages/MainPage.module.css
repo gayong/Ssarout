@@ -1,0 +1,62 @@
+.div {
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-mini);
+  color: black;
+  font-family: 'lineRg';
+}
+
+.container {
+  min-height:calc(100vh - 38px);
+}
+
+.searchMent {
+  color: white;
+  font-size: 17px;
+  letter-spacing: -0.5px;
+}
+
+.footer {
+  position: relative;
+  transform: translateY(0%);
+  height: 30px;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  align-self: center;
+  align-items: center;
+}
+
+.footerMent {
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  align-items: center;
+
+}
+
+.footerLine {
+  width: 90%;
+  opacity: 0.7;
+  display: flex;
+}
+
+.notice {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.noticeMent {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  margin-left: 0.5rem;
+  color : white;
+  font-family: 'lineTh';
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.questMent {
+  font-family: 'lineRg';
+}

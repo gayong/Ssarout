@@ -1,0 +1,85 @@
+.changeNickname {
+  background-color: rgb(212, 212, 212);
+  margin-top: 1px;
+  width: 70%;
+  height: 40px;
+  border-radius: 10px;
+  color: black;
+  font-size: 18px;
+  padding-top: 3px;
+  padding-bottom: 0;
+  font-weight: bold;
+}
+
+.changeNickname::placeholder {
+  color: #484848;
+  font-size: 18px;
+  padding-top: 3px;
+  padding-bottom: 0;
+  font-weight: bold;
+}
+
+.changeBtn {
+  width: 18%;
+  height: 30px;
+  background-color: white;
+  border-radius: 20px;
+  font-family: 'lineRg';
+  font-size: 15px;
+  padding-top: 3px;
+  color: #4B72C5;
+  font-weight: bold;
+  border: none;
+}
+
+.updateHeader {
+  font-family: 'lineTh';
+  margin-bottom: 14px;
+}
+
+.updateBackBtn {
+  align-items: start;
+  text-decoration: none;
+  border: solid 1px white;
+  border-radius: 30px;
+  background-color: transparent;
+  display: flex;
+  justify-content: start;
+  margin-left: 30px;
+}
+
+.updateBackA {
+  text-decoration: none;
+  color: white;
+  font-family: 'lineRg';
+  display: flex;
+  justify-content: center;
+  padding-top: 3px;
+}
+
+.delete {
+  font-family: 'lineTh';
+  display: flex;
+  justify-content: end;
+  margin-right: 30px;
+  text-decoration: underline;
+  margin-top: 90px;
+}
+
+.profileImg {
+  border-radius: 70%;
+  overflow: hidden;
+  width: 9rem;
+  height: 9rem;
+}
+
+.updateMent {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: start;
+  margin-left: 55px;
+}
+
+.container {
+  min-height:calc(100vh - 38px);
+}
