@@ -323,3 +323,8 @@
   <span>이세울</span>
   <span>황세진</span>
 </div>
+
+|Front-End|Front-End|Front-End|Back-End|Back-End|Back-End|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|<img src="readme_assets/jm.png" title="" alt="정민2.png" width="16%">|<img src="readme_assets/gayoung.png" title="" alt="가영2.png" width="16%">|<img src="readme_assets/sw.png" title="" alt="세울2.png" width="16%">|<img title="" src="readme_assets/chang.png" alt="창혁2.png" width="16%">|<img title="" src="readme_assets/gr.png" alt="규렬2.png" width="16%">|<img src="readme_assets/sejin.png" title="" alt="세진2.png" width="16%">|  
+|공정민|이가영|이세울|김창혁|심규렬|황세진|
