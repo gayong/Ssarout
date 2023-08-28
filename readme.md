@@ -307,24 +307,7 @@
 
 ## 팀원
 
-<p align="center" data-align="center">
-  <img src="readme_assets/e0e19c4c802ee401226ad25930ea6b993ced94b5.png" title="" alt="정민2.png" width="16%">
-  <img title="" src="readme_assets/58f9169b96438b77fbde1184108d54e8dc8f35e3.png" alt="창혁2.png" width="16%">
-  <img title="" src="readme_assets/e8b66bdba4b2bb21ce1eb4ea6c83ab10df13c467.png" alt="규렬2.png" width="16%">
-  <img src="readme_assets/891ec9260ef6577cd2b33f560dd7009e2c3d418a.png" title="" alt="가영2.png" width="16%">
-  <img src="readme_assets/e79b53f1c683c2a6553439ac7543f26d8df15989.png" title="" alt="세울2.png" width="16%">
-  <img src="readme_assets/sejin.png" title="" alt="세진2.png" width="16%">
-</p>
-<div style="display:flex; justify-content:space-between" align="center" data-align="center">
-  <span>공정민</span>
-  <span>김창혁</span>
-  <span>심규렬</span>
-  <span>이가영</span>
-  <span>이세울</span>
-  <span>황세진</span>
-</div>
-
 |Front-End|Front-End|Front-End|Back-End|Back-End|Back-End|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|<img src="readme_assets/jm.png" title="" alt="정민2.png" width="16%">|<img src="readme_assets/gayoung.png" title="" alt="가영2.png" width="16%">|<img src="readme_assets/sw.png" title="" alt="세울2.png" width="16%">|<img title="" src="readme_assets/chang.png" alt="창혁2.png" width="16%">|<img title="" src="readme_assets/gr.png" alt="규렬2.png" width="16%">|<img src="readme_assets/sejin.png" title="" alt="세진2.png" width="16%">|  
+|<img src="readme_assets/jm.png" title="" alt="정민2.png" width="100%">|<img src="readme_assets/gayoung.png" title="" alt="가영2.png" width="100%">|<img src="readme_assets/sw.png" title="" alt="세울2.png" width="100%">|<img title="" src="readme_assets/chang.png" alt="창혁2.png" width="100%">|<img title="" src="readme_assets/gr.png" alt="규렬2.png" width="100%">|<img src="readme_assets/sejin.png" title="" alt="세진2.png" width="100%">|  
 |공정민|이가영|이세울|김창혁|심규렬|황세진|
