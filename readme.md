@@ -128,7 +128,7 @@
 
 |AI 노래 들으러가기 및 재생|녹음페이지 full|
 |:---:|:---:|
-|<img src="readme_assets/AI_4곡일때 AI_페이지 이동 및 재생.gif" title="" alt="정민2.png" width="100%">|<img src="readme_assets/녹음.gif" title="" alt="가영2.png" width="100%">|
+|![AI_페이지 이동 및 재생.gif](./AI_페이지 이동 및 재생.gif)|![녹음.gif](./녹음.gif)|
 
 <p align="center">
   <img src="readme_assets/96be658f32778beafebf3b597734aaca8624a4a9.gif" align="center" width="32%">
