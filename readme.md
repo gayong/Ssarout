@@ -135,7 +135,7 @@
 <br/>
 
 ## 목업
-![image-4.png](./image-4.png)     
+![image-2.png](./image-2.png)  
 <br/>
 
 ## 프로젝트 구조도
