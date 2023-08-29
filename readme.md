@@ -136,7 +136,7 @@
 <br/>
 
 ## 목업
-![image-2.png](./image-2.png)  
+<img src="readme_assets/목업.png" title="" alt="목업.png" width="100%">  
 <br/>
 
 ## 프로젝트 구조도
