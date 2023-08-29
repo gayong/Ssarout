@@ -120,7 +120,7 @@
 
 |마이페이지 즐겨찾기|마이페이지 성장그래프|히스토리|
 |:---:|:---:|:---:|
-|<img src="readme_assets/마이페이지_즐찾.gif" title="" alt="정민2.png" width="100%">|<img src="readme_assets/마이페이지_성장그래프.gif" title="" alt="가영2.png" width="100%">|<img src="readme_assets/히스토리.gif" title="" alt="세울2.png" width="100%">|
+|![마이페이지_즐찾.gif](./마이페이지_즐찾.gif)|![마이페이지_성장그래프.gif](./마이페이지_성장그래프.gif)|![히스토리.gif](./히스토리.gif)|
 
 |녹음한 곡이 4곡일때|한 곡 부르고 AI 게이지 차기|5곡 채운 후 AI 노래 신청|
 |:---:|:---:|:---:|
