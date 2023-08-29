@@ -124,7 +124,7 @@
 
 |녹음한 곡이 4곡일때|한 곡 부르고 AI 게이지 차기|5곡 채운 후 AI 노래 신청|
 |:---:|:---:|:---:|
-|<img src="readme_assets/AI_4곡일때 쇼츠.gif" title="" alt="정민2.png" width="100%">|<img src="readme_assets/한곡부르고_메인_게이지_차기.gif" title="" alt="가영2.png" width="100%">|<img src="readme_assets/AI_다채우고 ai 신청.gif" title="" alt="세울2.png" width="100%">|
+|![AI_4곡일때 쇼츠.gif](./AI_4곡일때 쇼츠.gif)|![한곡부르고_메인_게이지_차기.gif](./한곡부르고_메인_게이지_차기.gif)|![AI_다채우고 ai 신청.gif](./AI_다채우고 ai 신청.gif)|
 
 |AI 노래 들으러가기 및 재생|녹음페이지 full|
 |:---:|:---:|
