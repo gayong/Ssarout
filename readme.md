@@ -134,11 +134,15 @@
 ![image (11).png](readme_assets/52a9e5c563f6ccd1cf5261eac5d5c233703ed8b2.png)  
 <br/>
 
+## 목업
+![image-4.png](./image-4.png)     
+<br/>
+
 ## 프로젝트 구조도
 
 
 ```
-📦공통PJT_주석 살린 버전
+📦Front-end
  ┣ 📂public
  ┃ ┣ 📂dist
  ┃ ┃ ┣ 📜index.css
