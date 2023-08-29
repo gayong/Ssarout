@@ -110,6 +110,11 @@
 |:---:|:---:|:---:|
 |<img src="readme_assets/유저_회원가입_닉넴설정.gif" title="" alt="정민2.png" width="100%">|<img src="readme_assets/유저_로그인_기록0.gif" title="" alt="가영2.png" width="100%">|<img src="readme_assets/유저_회원정보수정.gif" title="" alt="세울2.png" width="100%">|
 
+
+|녹음한 곡이 4곡일때|한 곡 부르고 AI 게이지 차기|5곡 채운 후 AI 노래 신청|
+|:---:|:---:|:---:|
+|![image-3.png](./image-3.png)|<img src="readme_assets/한곡부르고_메인_게이지_차기.gif" title="" alt="가영2.png" width="100%">|<img src="readme_assets/AI_다채우고 ai 신청.gif" title="" alt="세울2.png" width="100%">|
+
 <p align="center">
   <img src="readme_assets/96be658f32778beafebf3b597734aaca8624a4a9.gif" align="center" width="32%">
   <img src="readme_assets/06a9da4b3c619b79c2004f176e3a834cb2cc47b5.gif" align="center" width="32%">
