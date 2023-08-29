@@ -110,10 +110,25 @@
 |:---:|:---:|:---:|
 |![유저_회원가입_닉넴설정.gif](./유저_회원가입_닉넴설정.gif)|![유저_로그인_기록0.gif](./유저_로그인_기록0.gif)|![유저_회원정보수정.gif](./유저_회원정보수정.gif)|
 
+|전체곡 조회|검색 & 즐찾|검색 후 녹음|
+|:---:|:---:|:---:|
+|![검색_확성기_전체곡조회.gif](./검색_확성기_전체곡조회.gif)|![검색_장범준검색_즐찾.gif](./검색_장범준검색_즐찾.gif)|![검색 후 녹음.gif](./검색 후 녹음.gif)|
+
+|녹음|녹음 후 결과|다시부르기|
+|:---:|:---:|:---:|
+|<img src="readme_assets/녹음_short.gif" title="" alt="정민2.png" width="100%">|<img src="readme_assets/녹음_노래끝나고 바로 결과페이지 연결.gif" title="" alt="가영2.png" width="100%">|<img src="readme_assets/다시부르기_full.gif" title="" alt="세울2.png" width="100%">|
+
+|마이페이지 즐겨찾기|마이페이지 성장그래프|히스토리|
+|:---:|:---:|:---:|
+|<img src="readme_assets/마이페이지_즐찾.gif" title="" alt="정민2.png" width="100%">|<img src="readme_assets/마이페이지_성장그래프.gif" title="" alt="가영2.png" width="100%">|<img src="readme_assets/히스토리.gif" title="" alt="세울2.png" width="100%">|
 
 |녹음한 곡이 4곡일때|한 곡 부르고 AI 게이지 차기|5곡 채운 후 AI 노래 신청|
 |:---:|:---:|:---:|
-|![image-3.png](./image-3.png)|<img src="readme_assets/한곡부르고_메인_게이지_차기.gif" title="" alt="가영2.png" width="100%">|<img src="readme_assets/AI_다채우고 ai 신청.gif" title="" alt="세울2.png" width="100%">|
+|<img src="readme_assets/AI_4곡일때 쇼츠.gif" title="" alt="정민2.png" width="100%">|<img src="readme_assets/한곡부르고_메인_게이지_차기.gif" title="" alt="가영2.png" width="100%">|<img src="readme_assets/AI_다채우고 ai 신청.gif" title="" alt="세울2.png" width="100%">|
+
+|AI 노래 들으러가기 및 재생|녹음페이지 full|
+|:---:|:---:|
+|<img src="readme_assets/AI_4곡일때 AI_페이지 이동 및 재생.gif" title="" alt="정민2.png" width="100%">|<img src="readme_assets/녹음.gif" title="" alt="가영2.png" width="100%">|
 
 <p align="center">
   <img src="readme_assets/96be658f32778beafebf3b597734aaca8624a4a9.gif" align="center" width="32%">
