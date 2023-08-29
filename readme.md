@@ -106,6 +106,9 @@
 <br/>
 
 ## 화면구현
+|메인화면 & 회원가입|로그인|회원정보수정|
+|:---:|:---:|:---:|
+|<img src="readme_assets/유저_회원가입_닉넴설정.gif" title="" alt="정민2.png" width="100%">|<img src="readme_assets/유저_로그인_기록0.gif" title="" alt="가영2.png" width="100%">|<img src="readme_assets/유저_회원정보수정.gif" title="" alt="세울2.png" width="100%">|
 
 <p align="center">
   <img src="readme_assets/96be658f32778beafebf3b597734aaca8624a4a9.gif" align="center" width="32%">
