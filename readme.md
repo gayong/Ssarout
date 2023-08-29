@@ -128,30 +128,8 @@
 
 |AI 노래 들으러가기 및 재생|녹음페이지 full|
 |:---:|:---:|
-|![AI_페이지 이동 및 재생.gif](./AI_페이지 이동 및 재생.gif)|![녹음.gif](./녹음.gif)|
-
-<p align="center">
-  <img src="readme_assets/96be658f32778beafebf3b597734aaca8624a4a9.gif" align="center" width="32%">
-  <img src="readme_assets/06a9da4b3c619b79c2004f176e3a834cb2cc47b5.gif" align="center" width="32%">
-  <img src="readme_assets/12205e3e3dc24124ec4cac9f17367f3f44d58d29.gif" align="center" width="32%">
-</p>
-<p align="center">
-  <img src="readme_assets/96be658f32778beafebf3b597734aaca8624a4a9.gif" align="center" width="32%">
-  <img src="readme_assets/06a9da4b3c619b79c2004f176e3a834cb2cc47b5.gif" align="center" width="32%">
-  <img src="readme_assets/12205e3e3dc24124ec4cac9f17367f3f44d58d29.gif" align="center" width="32%">
-</p>
-<p align="center">
-  <img src="readme_assets/96be658f32778beafebf3b597734aaca8624a4a9.gif" align="center" width="32%">
-  <img src="readme_assets/06a9da4b3c619b79c2004f176e3a834cb2cc47b5.gif" align="center" width="32%">
-  <img src="readme_assets/12205e3e3dc24124ec4cac9f17367f3f44d58d29.gif" align="center" width="32%">
-</p>
-<p align="center">
-  <img src="readme_assets/96be658f32778beafebf3b597734aaca8624a4a9.gif" align="center" width="32%">
-  <img src="readme_assets/06a9da4b3c619b79c2004f176e3a834cb2cc47b5.gif" align="center" width="32%">
-  <img src="readme_assets/12205e3e3dc24124ec4cac9f17367f3f44d58d29.gif" align="center" width="32%">
-</p>  
+|![AI_페이지 이동 및 재생.gif](./AI_페이지 이동 및 재생.gif)|![녹음.gif](./녹음.gif)|  
 <br/>
-
 
 ## 시스템 아키텍처
 ![image (11).png](readme_assets/52a9e5c563f6ccd1cf5261eac5d5c233703ed8b2.png)  
