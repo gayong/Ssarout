@@ -137,7 +137,7 @@
 
 ## 목업
 <img src="readme_assets/목업.PNG" title="" alt="목업.PNG" width="80%">  
-<br/>
+<br/><br/>
 
 ## 프로젝트 구조도
 
