@@ -116,7 +116,7 @@
 
 |녹음|녹음 후 결과|다시부르기|
 |:---:|:---:|:---:|
-|![녹음_short.gif](readme_assets/녹음_short.gif)|![녹음_노래끝나고 바로 결과페이지 연결.gif](./녹음_노래끝나고 바로 결과페이지 연결.gif)|![다시부르기_full.gif](./다시부르기_full.gif)|
+|![녹음_short.gif](readme_assets/녹음_short.gif)|![녹음_노래끝나고 바로 결과페이지 연결.gif](readme_assets/녹음_노래끝나고 바로 결과페이지 연결.gif)|![다시부르기_full.gif](readme_assets/다시부르기_full.gif)|
 
 |마이페이지 즐겨찾기|마이페이지 성장그래프|히스토리|
 |:---:|:---:|:---:|
