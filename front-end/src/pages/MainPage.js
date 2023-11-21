@@ -26,7 +26,7 @@ const MainPage = () => {
             <Tooltip placement="bottomRight" title={text}>
             <Badge dot style={{ marginLeft: '0.5rem', marginTop:'15px' }}>
               <NotificationOutlined style={{ marginLeft: '0.5rem', color:'white', fontSize: 20, marginBottom:0, marginTop:'15px' }} />
-            </Badge>        
+            </Badge>
             </Tooltip>
           </div>
         </div>

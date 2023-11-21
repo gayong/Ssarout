@@ -32,40 +32,40 @@ function App() {
       <Routes>
 
         <Route exact path="/" element={<MainPage/>}/>
-        <Route 
-          exact path="/mypage" 
+        <Route
+          exact path="/mypage"
           element={
             <PrivateRoute>
-              <MyPage />  
+              <MyPage />
             </PrivateRoute>
           }
         />
 
         <Route exact path="/search" element={<SearchResult/>}/>
 
-        <Route 
-          exact path="/update" 
+        <Route
+          exact path="/update"
           element={
             <PrivateRoute>
-              <UserUpdate />  
-            </PrivateRoute>
-          }
-        />
-       
-        <Route 
-          exact path="/singingAI" 
-          element={
-            <PrivateRoute>
-              <SingingAI />  
+              <UserUpdate />
             </PrivateRoute>
           }
         />
 
-        <Route 
-          exact path="/login" 
+        <Route
+          exact path="/singingAI"
+          element={
+            <PrivateRoute>
+              <SingingAI />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          exact path="/login"
           element={
             <PublicRoute>
-              <Login />  
+              <Login />
             </PublicRoute>
           }
         />
@@ -73,48 +73,48 @@ function App() {
         <Route exact path="/oauth/redirect" element={<Redirecion/>}/>
         <Route exact path="/record/:songId" element={<SingTest />} />
 
-        <Route 
-          exact path="/analysis" 
+        <Route
+          exact path="/analysis"
           element={
             <PageBlock>
-              <Analysis />  
+              <Analysis />
             </PageBlock>
           }
         />
 
 
-        <Route 
-          exact path="/nickNamePage" 
+        <Route
+          exact path="/nickNamePage"
           element={
             <PrivateRoute>
-              <NickNamePage />  
-            </PrivateRoute>
-          }
-        />
-      
-        <Route 
-          exact path="/history" 
-          element={
-            <PrivateRoute>
-              <History />  
-            </PrivateRoute>
-          }
-        />
-        
-        <Route 
-          exact path="/history/:title"
-          element={
-            <PrivateRoute>
-              <HistoryDetail />  
+              <NickNamePage />
             </PrivateRoute>
           }
         />
 
-        <Route 
-          exact path="/growth/:songId/" 
+        <Route
+          exact path="/history"
           element={
             <PrivateRoute>
-              <Growth />  
+              <History />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          exact path="/history/:title"
+          element={
+            <PrivateRoute>
+              <HistoryDetail />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          exact path="/growth/:songId/"
+          element={
+            <PrivateRoute>
+              <Growth />
             </PrivateRoute>
           }
         />

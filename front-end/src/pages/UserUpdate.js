@@ -11,7 +11,7 @@ const UpdatePage = () => {
   const [nickname, setNickname] = useState("Guest");
   const [profileUrl, setProfileUrl] = useState("");
   let profileImg;
-  
+
   useEffect(() => {
     f1();
   }, []);
@@ -43,7 +43,7 @@ const UpdatePage = () => {
       console.error(error);
     }
   };
-  
+
   const f3 = async () => {
     try {
       await Api.delete("/api/v1/users").then((response) => {

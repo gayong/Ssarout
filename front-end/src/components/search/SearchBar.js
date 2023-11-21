@@ -27,14 +27,14 @@ const SearchBar = () => {
 
   return (
     <div className={styles.searchBox}>
-      <input 
-        className={styles.searchbar} 
-        placeholder="노래명, 가수명을 입력하세요" 
+      <input
+        className={styles.searchbar}
+        placeholder="노래명, 가수명을 입력하세요"
         value={keyword}
         onKeyUp={enterPress}
         onChange={onChange}
         type='text' />
-        <Link to="/search" state={{data: keyword}}> 
+        <Link to="/search" state={{data: keyword}}>
         <img
           className={styles.searchIcon}
           alt="search"
