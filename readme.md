@@ -1,7 +1,11 @@
 # <싸:라웃> - 음성 분석을 통한 AI 보컬 트레이닝🎤🎵
 **SSAFY 9기 2학기 공통 프로젝트 - 싸:라웃**
- [UCC 보러가기](https://youtu.be/fpCaXvi1ilU)  
 <br/>
+
+ [🎞 UCC 보러가기](https://youtu.be/fpCaXvi1ilU)  
+ [📝 노션 보러가기](https://phrygian-sheet-619.notion.site/SSAFY-PJT_E203-WorkBench-e76babdba17a474592cea5807b05cbdb?pvs=4)
+<br/>
+
 ## 서비스 소개
 ### 개요
 - 서비스 명 : 싸:라웃
